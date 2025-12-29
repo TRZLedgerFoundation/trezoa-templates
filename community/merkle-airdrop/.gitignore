@@ -53,17 +53,17 @@ node_modules
 test-wallet-*.json
 test-wallets.json
 
-anchor/generated/**
-anchor/deploy-wallet.json
+trezoaanchor/generated/**
+trezoaanchor/deploy-wallet.json
 
 
-# Anchor
-/anchor/.anchor
-/anchor/target/debug
-/anchor/target/deploy
-/anchor/target/release
-/anchor/target/sbf-trezoa-trezoa
-/anchor/target/test-ledger
-/anchor/target/.rustc_info.json
+# TrezoaAnchor
+/trezoaanchor/.trezoaanchor
+/trezoaanchor/target/debug
+/trezoaanchor/target/deploy
+/trezoaanchor/target/release
+/trezoaanchor/target/sbf-trezoa-trezoa
+/trezoaanchor/target/test-ledger
+/trezoaanchor/target/.rustc_info.json
 test-ledger
 **/*.rs.bk

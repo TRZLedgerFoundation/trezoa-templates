@@ -1,0 +1,22 @@
+[package]
+name = "trezoa-distributor"
+version = "0.1.0"
+description = "Created with TrezoaAnchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "trezoa_distributor"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["trezoaanchor-lang/idl-build", "trezoaanchor-tpl/idl-build"]
+
+[dependencies]
+trezoaanchor-lang = { version = "0.31.1", features = ["init-if-needed"] }
+trezoaanchor-tpl = "0.31.0"
+

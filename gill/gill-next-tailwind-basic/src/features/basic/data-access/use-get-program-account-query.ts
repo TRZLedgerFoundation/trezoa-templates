@@ -1,4 +1,4 @@
-import { BASIC_PROGRAM_ADDRESS } from '@project/anchor'
+import { BASIC_PROGRAM_ADDRESS } from '@project/trezoaanchor'
 import { useTrezoa } from '@/components/trezoa/use-trezoa'
 import { useQuery } from '@tanstack/react-query'
 

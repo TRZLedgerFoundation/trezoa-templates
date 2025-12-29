@@ -1,12 +1,12 @@
-import * as anchor from '@trezoa-xyz/anchor'
-import { Program } from '@trezoa-xyz/anchor'
+import * as trezoaanchor from '@trezoa-xyz/trezoaanchor'
+import { Program } from '@trezoa-xyz/trezoaanchor'
 import { Basic } from '../target/types/basic'
 
 describe('basic', () => {
   // Configure the client to use the local cluster.
-  anchor.setProvider(anchor.AnchorProvider.env())
+  trezoaanchor.setProvider(trezoaanchor.TrezoaAnchorProvider.env())
 
-  const program = anchor.workspace.Basic as Program<Basic>
+  const program = trezoaanchor.workspace.Basic as Program<Basic>
 
   it('should run the program', async () => {
     // Add your test here.

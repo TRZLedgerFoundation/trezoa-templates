@@ -3,7 +3,7 @@
  * Generate templates.json and TEMPLATES.md from template directories
  *
  * This script replaces the need for @beeman/repokit to generate template metadata.
- * It maintains 100% compatibility with the output format consumed by create-solana-dapp
+ * It maintains 100% compatibility with the output format consumed by create-trezoa-dapp
  * and templates-site.
  *
  * Usage: tsx scripts/generate.ts
@@ -32,7 +32,7 @@ const WORKFLOW_TEMPLATES_JSON_PATH = join(ROOT_DIR, '.github', 'workflows', 'tem
 const CONFIG_KEY = 'repokit' as const
 const OG_IMAGE_FILENAME = 'og-image.png' as const
 const GIGET_PREFIX = 'gh:' as const
-const DEFAULT_REPO = 'solana-foundation/templates' as const
+const DEFAULT_REPO = 'trzledgerfoundation/templates' as const
 
 /**
  * Read configuration from root package.json

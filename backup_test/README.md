@@ -69,13 +69,13 @@ pnpm format      # Format code
 
 ## Contributors
 
-<!-- automd:contributors github="trezoa-foundation/templates" license="MIT" -->
+<!-- automd:contributors github="trzledgerfoundation/templates" license="MIT" -->
 
-Published under the [MIT](https://github.com/trezoa-foundation/templates/blob/main/LICENSE) license.
-Made by [community](https://github.com/trezoa-foundation/templates/graphs/contributors) 💛
+Published under the [MIT](https://github.com/trzledgerfoundation/templates/blob/main/LICENSE) license.
+Made by [community](https://github.com/trzledgerfoundation/templates/graphs/contributors) 💛
 <br><br>
-<a href="https://github.com/trezoa-foundation/templates/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=trezoa-foundation/templates" />
+<a href="https://github.com/trzledgerfoundation/templates/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=trzledgerfoundation/templates" />
 </a>
 
 <!-- /automd -->

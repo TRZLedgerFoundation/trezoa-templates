@@ -1,12 +1,12 @@
 # Add files here to ignore them from prettier formatting
-/anchor/src/client/js/generated
-/anchor/.anchor
-/anchor/target/debug
-/anchor/target/deploy
-/anchor/target/release
-/anchor/target/sbf-trezoa-trezoa
-/anchor/target/test-ledger
-/anchor/target/.rustc_info.json
+/trezoaanchor/src/client/js/generated
+/trezoaanchor/.anchor
+/trezoaanchor/target/debug
+/trezoaanchor/target/deploy
+/trezoaanchor/target/release
+/trezoaanchor/target/sbf-trezoa-trezoa
+/trezoaanchor/target/test-ledger
+/trezoaanchor/target/.rustc_info.json
 /dist
 /coverage
 tmp

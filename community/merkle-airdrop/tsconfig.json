@@ -25,5 +25,5 @@
     "types": ["node"]
   },
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts", ".next/dev/types/**/*.ts"],
-  "exclude": ["node_modules", "anchor/**/*", ".next"]
+  "exclude": ["node_modules", "trezoaanchor/**/*", ".next"]
 }

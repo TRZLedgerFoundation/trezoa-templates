@@ -1,5 +1,5 @@
 {
-  "name": "@trezoa-foundation/templates",
+  "name": "@trzledgerfoundation/templates",
   "version": "1.0.0",
   "description": "Trezoa Templates for create-trezoa-dapp",
   "main": "index.js",
@@ -55,8 +55,8 @@
     ]
   },
   "repository": {
-    "name": "trezoa-foundation/templates",
+    "name": "trzledgerfoundation/templates",
     "type": "git",
-    "url": "https://github.com/trezoa-foundation/templates"
+    "url": "https://github.com/trzledgerfoundation/templates"
   }
 }

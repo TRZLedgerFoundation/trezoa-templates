@@ -6,7 +6,7 @@ config({ path: path.join(process.cwd(), '..', '.env') })
 
 const PAYER_PRIVATE_KEY = process.env.PAYER_PRIVATE_KEY as string
 const PROTECTED_API_URL = process.env.PROTECTED_API_URL || 'http://localhost:4021/protected'
-const NETWORK = process.env.NETWORK || 'solana'
+const NETWORK = process.env.NETWORK || 'trezoa'
 const DEBUG = process.env.DEBUG === 'true'
 
 // Debug logging helper

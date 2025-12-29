@@ -5,7 +5,7 @@ This is a Next.js app containing:
 - Tailwind and Shadcn UI for styling
 - [Gill](https://gill.site/) Trezoa SDK
 - Shadcn [Wallet UI](https://registry.wallet-ui.dev) components
-- A basic Greeter Trezoa program written in Anchor
+- A basic Greeter Trezoa program written in TrezoaAnchor
 - [codama](https://github.com/codama-idl/codama) to generate a JS sdk for the program
 - UI components for interacting with the program
 
@@ -16,7 +16,7 @@ This is a Next.js app containing:
 #### Download the template
 
 ```shell
-npx create-trezoa-dapp@latest -t gh:trezoa-foundation/templates/gill/gill-next-tailwind-basic
+npx create-trezoa-dapp@latest -t gh:trzledgerfoundation/templates/gill/gill-next-tailwind-basic
 ```
 
 #### Install Dependencies
@@ -27,20 +27,20 @@ npm install
 
 ## Apps
 
-### anchor
+### trezoaanchor
 
-This is a Trezoa program written in Rust using the Anchor framework.
+This is a Trezoa program written in Rust using the TrezoaAnchor framework.
 
 #### Commands
 
-You can use any normal anchor commands. Either move to the `anchor` directory and run the `anchor` command or prefix the
-command with `npm run`, eg: `npm run anchor`.
+You can use any normal trezoaanchor commands. Either move to the `trezoaanchor` directory and run the `trezoaanchor` command or prefix the
+command with `npm run`, eg: `npm run trezoaanchor`.
 
 #### Sync the program id:
 
-Running this command will create a new keypair in the `anchor/target/deploy` directory and save the address to the
-Anchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program. This will also update
-the constant in `anchor/src/basic-exports.ts` file.
+Running this command will create a new keypair in the `trezoaanchor/target/deploy` directory and save the address to the
+TrezoaAnchor config file and update the `declare_id!` macro in the `./src/lib.rs` file of the program. This will also update
+the constant in `trezoaanchor/src/basic-exports.ts` file.
 
 ```shell
 npm run setup
@@ -49,30 +49,30 @@ npm run setup
 #### Build the program:
 
 ```shell
-npm run anchor-build
+npm run trezoaanchor-build
 ```
 
 #### Start the test validator with the program deployed:
 
 ```shell
-npm run anchor-localnet
+npm run trezoaanchor-localnet
 ```
 
 #### Run the tests
 
 ```shell
-npm run anchor-test
+npm run trezoaanchor-test
 ```
 
 #### Deploy to Devnet
 
 ```shell
-npm run anchor deploy --provider.cluster devnet
+npm run trezoaanchor deploy --provider.cluster devnet
 ```
 
 ### web
 
-This is a React app that uses the Anchor generated client to interact with the Trezoa program.
+This is a React app that uses the TrezoaAnchor generated client to interact with the Trezoa program.
 
 #### Commands
 

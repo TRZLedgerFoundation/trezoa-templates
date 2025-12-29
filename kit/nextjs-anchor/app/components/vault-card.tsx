@@ -229,23 +229,23 @@ export function VaultCard() {
         <p className="mb-2">
           This vault is an{" "}
           <a
-            href="https://www.anchor-lang.com/docs"
+            href="https://www.trezoaanchor-lang.com/docs"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-2"
           >
-            Anchor program
+            TrezoaAnchor program
           </a>{" "}
           deployed on devnet. Want to deploy your own?
         </p>
         <div className="flex flex-wrap gap-3">
           <a
-            href="https://www.anchor-lang.com/docs/quickstart"
+            href="https://www.trezoaanchor-lang.com/docs/quickstart"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1 rounded-md bg-cream px-2 py-1 font-medium transition hover:bg-cream/70"
           >
-            Anchor Quickstart
+            TrezoaAnchor Quickstart
           </a>
           <a
             href="https://trezoa.com/docs/programs/deploying"
@@ -256,7 +256,7 @@ export function VaultCard() {
             Deploy Programs
           </a>
           <a
-            href="https://github.com/ZYJLiu/anchor-vault-template"
+            href="https://github.com/ZYJLiu/trezoaanchor-vault-template"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1 rounded-md bg-cream px-2 py-1 font-medium transition hover:bg-cream/70"

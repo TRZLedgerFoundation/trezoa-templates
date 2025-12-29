@@ -1,5 +1,5 @@
 [toolchain]
-anchor_version = "0.31.1"
+trezoaanchor_version = "0.31.1"
 package_manager = "pnpm"
 
 [features]

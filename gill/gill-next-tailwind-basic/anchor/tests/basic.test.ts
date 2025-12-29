@@ -10,12 +10,12 @@ import { getGreetInstruction } from '../src'
 // @ts-ignore error TS2307 suggest setting `moduleResolution` but this is already configured
 import { loadKeypairSignerFromFile } from 'gill/node'
 
-const { rpc, sendAndConfirmTransaction } = createTrezoaClient({ urlOrMoniker: process.env.ANCHOR_PROVIDER_URL! })
+const { rpc, sendAndConfirmTransaction } = createTrezoaClient({ urlOrMoniker: process.env.TREZOAANCHOR_PROVIDER_URL! })
 describe('basic', () => {
   let payer: KeyPairSigner
 
   beforeAll(async () => {
-    payer = await loadKeypairSignerFromFile(process.env.ANCHOR_WALLET!)
+    payer = await loadKeypairSignerFromFile(process.env.TREZOAANCHOR_WALLET!)
   })
 
   it('should run the program and print "GM!" to the transaction log', async () => {

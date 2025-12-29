@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@codama/cli": "^1.3.1",
-    "@codama/nodes-from-anchor": "^1.2.5",
+    "@codama/nodes-from-trezoaanchor": "^1.2.5",
     "@codama/renderers": "^1.0.31",
     "@codama/visitors-core": "^1.3.3",
     "@eslint/eslintrc": "^3.3.1",

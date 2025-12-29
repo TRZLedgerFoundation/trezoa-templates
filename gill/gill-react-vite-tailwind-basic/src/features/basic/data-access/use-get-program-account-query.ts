@@ -1,6 +1,6 @@
 import { useTrezoa } from '@/components/trezoa/use-trezoa'
 import { useQuery } from '@tanstack/react-query'
-import { BASIC_PROGRAM_ADDRESS } from '@project/anchor'
+import { BASIC_PROGRAM_ADDRESS } from '@project/trezoaanchor'
 
 export function useGetProgramAccountQuery() {
   const { client, cluster } = useTrezoa()

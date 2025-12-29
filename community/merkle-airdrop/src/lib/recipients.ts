@@ -3,7 +3,7 @@
  *
  * ⚠️  IMPORTANT: This file contains mock data for development purposes.
  *
- * When you run the deploy-setup script (npx ts-node anchor/scripts/deploy-setup.ts),
+ * When you run the deploy-setup script (npx ts-node trezoaanchor/scripts/deploy-setup.ts),
  * this file will be automatically updated with:
  * - Real program ID from your deployment
  * - Actual test wallet addresses

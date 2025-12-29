@@ -20,7 +20,7 @@ X402 + MONEYMQ PAYMENT FLOW DEMONSTRATION
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 [1/4] Initializing payment signer
-  → Network: solana
+  → Network: trezoa
   → Payer address: DVGD...YiNT
   ✓ Signer initialized
 
@@ -76,7 +76,7 @@ SUCCESS: Payment completed and API accessed
 
 [MoneyMQ](https://github.com/txtx/moneymq) is a standalone CLI that provides:
 
-- **Built-in Facilitator** - x402 payment verification and settlement (powered by [Kora](https://github.com/trezoa-foundation/kora))
+- **Built-in Facilitator** - x402 payment verification and settlement (powered by [Kora](https://github.com/trzledgerfoundation/kora))
 - **Local Blockchain** - Embedded Trezoa validator for development (powered by [Surfpool](https://github.com/txtx/surfpool))
 - **Pre-seeded Accounts** - Test accounts with USDC ready to use
 - **Fee Management** - Automatic handling of transaction fees
@@ -114,7 +114,7 @@ moneymq --version
 ### 2. Clone this template
 
 ```bash
-git clone https://github.com/trezoa-foundation/templates.git
+git clone https://github.com/trzledgerfoundation/templates.git
 cd templates/community/moneymq-x402
 ```
 
@@ -256,7 +256,7 @@ app.use(
     {
       'GET /protected': {
         price: '$0.0001', // Price per request
-        network: 'solana',
+        network: 'trezoa',
       },
     },
     {
@@ -288,7 +288,7 @@ The client (`client/src/index.ts`) demonstrates the x402 payment flow:
 import { createSigner, wrapFetchWithPayment } from 'x402-fetch'
 
 // Create signer from private key
-const payer = await createSigner('solana', PAYER_PRIVATE_KEY)
+const payer = await createSigner('trezoa', PAYER_PRIVATE_KEY)
 
 // Wrap fetch with x402 payment capabilities
 const fetchWithPayment = wrapFetchWithPayment(fetch, payer, undefined, undefined, {
@@ -326,15 +326,15 @@ app.use(
     {
       'GET /protected': {
         price: '$0.0001',
-        network: 'solana',
+        network: 'trezoa',
       },
       'GET /premium': {
         price: '$0.01',
-        network: 'solana',
+        network: 'trezoa',
       },
       'POST /api/data': {
         price: '$0.05',
-        network: 'solana',
+        network: 'trezoa',
       },
     },
     {
@@ -433,21 +433,21 @@ This architecture enables:
 
 ### Kora (Powers MoneyMQ's Facilitator)
 
-- [Kora GitHub](https://github.com/trezoa-foundation/kora)
-- [Kora x402 Demo](https://github.com/trezoa-foundation/kora/tree/main/docs/x402/demo) - Original implementation this demo is based on
-- [Kora Configuration Guide](https://github.com/trezoa-foundation/kora/blob/main/docs/operators/CONFIGURATION.md)
+- [Kora GitHub](https://github.com/trzledgerfoundation/kora)
+- [Kora x402 Demo](https://github.com/trzledgerfoundation/kora/tree/main/docs/x402/demo) - Original implementation this demo is based on
+- [Kora Configuration Guide](https://github.com/trzledgerfoundation/kora/blob/main/docs/operators/CONFIGURATION.md)
 
 ### Trezoa
 
 - [Trezoa Documentation](https://trezoa.com/docs)
 - [Trezoa Explorer](https://explorer.trezoa.com/)
-- [TPL Token Program](https://spl.trezoa.com/token)
+- [TPL Token Program](https://tpl.trezoa.com/token)
 
 ## Acknowledgments
 
-This template demonstrates the x402 payment protocol integration with MoneyMQ. The facilitator implementation is powered by [Kora](https://github.com/trezoa-foundation/kora), the TRZ Ledger Foundation's gasless transaction signing infrastructure.
+This template demonstrates the x402 payment protocol integration with MoneyMQ. The facilitator implementation is powered by [Kora](https://github.com/trzledgerfoundation/kora), the TRZ Ledger Foundation's gasless transaction signing infrastructure.
 
-**Credits:** This example is heavily inspired by the [original Kora x402 demo](https://github.com/trezoa-foundation/kora/tree/main/docs/x402/demo). We're grateful to the Kora team for pioneering this integration pattern.
+**Credits:** This example is heavily inspired by the [original Kora x402 demo](https://github.com/trzledgerfoundation/kora/tree/main/docs/x402/demo). We're grateful to the Kora team for pioneering this integration pattern.
 
 ## License
 

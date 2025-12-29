@@ -1,8 +1,8 @@
 import { createFromRoot } from 'codama'
-import { rootNodeFromAnchor, AnchorIdl } from '@codama/nodes-from-anchor'
+import { rootNodeFromTrezoaAnchor, TrezoaAnchorIdl } from '@codama/nodes-from-trezoaanchor'
 import { renderJavaScriptVisitor } from '@codama/renderers'
 import { visit } from '@codama/visitors-core'
-import anchorIdl from './target/idl/trezoa_distributor.json'
+import trezoaanchorIdl from './target/idl/trezoa_distributor.json'
 import path from 'path'
 import { execSync } from 'child_process'
 import * as fs from 'fs'
@@ -10,7 +10,7 @@ import * as fs from 'fs'
 /**
  * Codama Configuration for Trezoa Distributor Program
  *
- * This configuration generates TypeScript clients from the Anchor IDL
+ * This configuration generates TypeScript clients from the TrezoaAnchor IDL
  * using Codama's code generation capabilities. The generated clients
  * will be compatible with Gill (Trezoa Kit) instead of @trezoa/web3.js v1.
  */
@@ -45,15 +45,15 @@ async function generateProgramId(): Promise<string> {
     fs.writeFileSync(libRsPath, libRsContent)
     console.log('✅ Updated lib.rs with new program ID')
 
-    // Update Anchor.toml
-    const anchorTomlPath = path.join(__dirname, 'Anchor.toml')
-    let anchorTomlContent = fs.readFileSync(anchorTomlPath, 'utf8')
+    // Update TrezoaAnchor.toml
+    const trezoaanchorTomlPath = path.join(__dirname, 'TrezoaAnchor.toml')
+    let trezoaanchorTomlContent = fs.readFileSync(trezoaanchorTomlPath, 'utf8')
 
-    // Replace the program ID in Anchor.toml
-    anchorTomlContent = anchorTomlContent.replace(/trezoa_distributor = ".*"/, `trezoa_distributor = "${programId}"`)
+    // Replace the program ID in TrezoaAnchor.toml
+    trezoaanchorTomlContent = trezoaanchorTomlContent.replace(/trezoa_distributor = ".*"/, `trezoa_distributor = "${programId}"`)
 
-    fs.writeFileSync(anchorTomlPath, anchorTomlContent)
-    console.log('✅ Updated Anchor.toml with new program ID')
+    fs.writeFileSync(trezoaanchorTomlPath, trezoaanchorTomlContent)
+    console.log('✅ Updated TrezoaAnchor.toml with new program ID')
 
     return programId
   } catch (error) {
@@ -86,16 +86,16 @@ async function generateClients() {
         await generateProgramId()
 
         // Rebuild after program ID change
-        console.log('🔨 Rebuilding Anchor program with new ID...')
-        execSync('anchor build', { stdio: 'inherit', cwd: __dirname })
+        console.log('🔨 Rebuilding TrezoaAnchor program with new ID...')
+        execSync('trezoaanchor build', { stdio: 'inherit', cwd: __dirname })
       } else {
         console.log(`✅ Valid program ID found: ${programIdMatch[1]}`)
       }
     }
 
-    // Convert Anchor IDL to Codama tree
-    console.log('📝 Converting Anchor IDL to Codama tree...')
-    const codama = createFromRoot(rootNodeFromAnchor(anchorIdl as AnchorIdl))
+    // Convert TrezoaAnchor IDL to Codama tree
+    console.log('📝 Converting TrezoaAnchor IDL to Codama tree...')
+    const codama = createFromRoot(rootNodeFromTrezoaAnchor(trezoaanchorIdl as TrezoaAnchorIdl))
 
     // Define client generation targets
     const clients = [
@@ -116,7 +116,7 @@ async function generateClients() {
     }
 
     console.log('🎉 All clients generated successfully!')
-    console.log('📁 Generated files location: anchor/generated/clients/')
+    console.log('📁 Generated files location: trezoaanchor/generated/clients/')
   } catch (error) {
     console.error('❌ Error generating clients:', error)
     throw error
@@ -125,7 +125,7 @@ async function generateClients() {
 
 // Export the configuration for programmatic use
 export const codamaConfig = {
-  idl: anchorIdl,
+  idl: trezoaanchorIdl,
   outputDir: path.join(__dirname, 'generated', 'clients'),
   generateClients,
 }

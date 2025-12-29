@@ -23,6 +23,6 @@ lerna-debug.log*
 # OS
 .DS_Store
 
-# Anchor build artifacts
-/anchor/.anchor/
-/anchor/target/
+# TrezoaAnchor build artifacts
+/trezoaanchor/.trezoaanchor/
+/trezoaanchor/target/

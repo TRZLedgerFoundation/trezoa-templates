@@ -1,4 +1,4 @@
-import { getBasicProgram, getBasicProgramId } from '@project/anchor'
+import { getBasicProgram, getBasicProgramId } from '@project/trezoaanchor'
 import { useConnection } from '@trezoa/wallet-adapter-react'
 import { Cluster } from '@trezoa/web3.js'
 import { useMutation, useQuery } from '@tanstack/react-query'
@@ -6,13 +6,13 @@ import { useMemo } from 'react'
 import { useCluster } from '@/components/cluster/cluster-data-access'
 import { useTransactionToast } from '@/components/use-transaction-toast'
 import { toast } from 'sonner'
-import { useAnchorProvider } from '@/components/trezoa/use-anchor-provider.tsx'
+import { useTrezoaAnchorProvider } from '@/components/trezoa/use-trezoaanchor-provider.tsx'
 
 export function useBasicProgram() {
   const { connection } = useConnection()
   const { cluster } = useCluster()
   const transactionToast = useTransactionToast()
-  const provider = useAnchorProvider()
+  const provider = useTrezoaAnchorProvider()
   const programId = useMemo(() => getBasicProgramId(cluster.network as Cluster), [cluster])
   const program = useMemo(() => getBasicProgram(provider, programId), [provider, programId])
 

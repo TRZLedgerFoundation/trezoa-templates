@@ -1,4 +1,4 @@
-import { CounterAccount, getSetInstruction } from '@project/anchor'
+import { CounterAccount, getSetInstruction } from '@project/trezoaanchor'
 import { useMutation } from '@tanstack/react-query'
 import { UiWalletAccount, useWalletUiSigner } from '@wallet-ui/react'
 import { useWalletUiSignAndSend } from '@wallet-ui/react-gill'

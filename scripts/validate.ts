@@ -3,7 +3,7 @@
  * Validate generated output matches expected format
  *
  * Compares generated templates.json with expected structure
- * to ensure compatibility with create-solana-dapp and templates-site
+ * to ensure compatibility with create-trezoa-dapp and templates-site
  *
  * Usage: tsx scripts/validate.ts
  */

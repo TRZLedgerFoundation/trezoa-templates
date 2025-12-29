@@ -18,7 +18,7 @@ mod tests {
     }
 
     fn create_deposit_ix(signer: &Pubkey, vault: &Pubkey, amount: u64) -> Instruction {
-        // Anchor discriminator for "deposit" = hash("global:deposit")[0..8]
+        // TrezoaAnchor discriminator for "deposit" = hash("global:deposit")[0..8]
         let discriminator: [u8; 8] = [242, 35, 198, 137, 82, 225, 242, 182];
         let mut data = discriminator.to_vec();
         data.extend_from_slice(&amount.to_le_bytes());
@@ -35,7 +35,7 @@ mod tests {
     }
 
     fn create_withdraw_ix(signer: &Pubkey, vault: &Pubkey) -> Instruction {
-        // Anchor discriminator for "withdraw" = hash("global:withdraw")[0..8]
+        // TrezoaAnchor discriminator for "withdraw" = hash("global:withdraw")[0..8]
         let discriminator: [u8; 8] = [183, 18, 70, 156, 148, 109, 161, 34];
 
         Instruction {

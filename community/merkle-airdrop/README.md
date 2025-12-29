@@ -1,17 +1,17 @@
-## Trezoa Merkle Airdrop Distributor (Codama + Anchor)
+## Trezoa Merkle Airdrop Distributor (Codama + TrezoaAnchor)
 
-A modern, script-driven Trezoa airdrop template that distributes TRZ to many recipients efficiently using a Merkle tree. Only the 32‑byte Merkle root is stored on-chain. The project uses Anchor for the on-chain program, Codama for a generated TypeScript client, and the @trezoa/kit for transactions. This README focuses on how the program works and how to use it through the provided scripts.
+A modern, script-driven Trezoa airdrop template that distributes TRZ to many recipients efficiently using a Merkle tree. Only the 32‑byte Merkle root is stored on-chain. The project uses TrezoaAnchor for the on-chain program, Codama for a generated TypeScript client, and the @trezoa/kit for transactions. This README focuses on how the program works and how to use it through the provided scripts.
 
 ### Table of Contents
 
-- [Trezoa Merkle Airdrop Distributor (Codama + Anchor)](#trezoa-merkle-airdrop-distributor-codama--anchor)
+- [Trezoa Merkle Airdrop Distributor (Codama + TrezoaAnchor)](#trezoa-merkle-airdrop-distributor-codama-trezoaanchor)
   - [Table of Contents](#table-of-contents)
 - [Prerequisites](#prerequisites)
   - [Quick Installation (Recommended)](#quick-installation-recommended)
   - [Manual Installation](#manual-installation)
     - [1. Install Rust](#1-install-rust)
     - [2. Install Trezoa CLI](#2-install-trezoa-cli)
-    - [3. Install Anchor CLI](#3-install-anchor-cli)
+    - [3. Install TrezoaAnchor CLI](#3-install-trezoaanchor-cli)
     - [4. Install Node.js and Yarn](#4-install-nodejs-and-yarn)
   - [Verify Installation](#verify-installation)
   - [Trezoa CLI Basics](#trezoa-cli-basics)
@@ -42,14 +42,14 @@ A modern, script-driven Trezoa airdrop template that distributes TRZ to many rec
 
 ## Prerequisites
 
-Before you can build and deploy Trezoa programs with this template, you need to install Rust, Trezoa CLI, and Anchor CLI on your system.
+Before you can build and deploy Trezoa programs with this template, you need to install Rust, Trezoa CLI, and TrezoaAnchor CLI on your system.
 
 ### Quick Installation (Recommended)
 
 On Mac and Linux, run this single command to install all dependencies:
 
 ```bash
-curl --proto '=https' --tlsv1.2 -sSfL https://trezoa-install.solana.workers.dev | bash
+curl --proto '=https' --tlsv1.2 -sSfL https://trezoa-install.trezoa.workers.dev | bash
 ```
 
 **Windows Users:** You must first install WSL (Windows Subsystem for Linux). Then run the command above in the Ubuntu (Linux) terminal.
@@ -60,7 +60,7 @@ After installation, you should see output similar to:
 Installed Versions:
 Rust: rustc 1.85.0 (4d91de4e4 2025-02-17)
 Trezoa CLI: trezoa-cli 2.1.15 (src:53545685; feat:3271415109, client:Trezoa-team)
-Anchor CLI: anchor-cli 0.31.1
+TrezoaAnchor CLI: trezoaanchor-cli 0.31.1
 Node.js: v23.9.0
 Yarn: 1.22.1
 
@@ -90,7 +90,7 @@ Reload your PATH environment variable:
 Install the Trezoa CLI tool suite:
 
 ```bash
-sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
+sh -c "$(curl -sSfL https://release.trezoa.xyz/stable/install)"
 ```
 
 Add Trezoa to your PATH (if prompted):
@@ -99,15 +99,15 @@ Add Trezoa to your PATH (if prompted):
 export PATH="$HOME/.local/share/trezoa/install/active_release/bin:$PATH"
 ```
 
-#### 3. Install Anchor CLI
+#### 3. Install TrezoaAnchor CLI
 
-Install Anchor Version Manager (AVM) for managing Anchor versions:
+Install TrezoaAnchor Version Manager (AVM) for managing TrezoaAnchor versions:
 
 ```bash
-cargo install --git https://github.com/coral-xyz/anchor avm --force
+cargo install --git https://github.com/trezoa-xyz/trezoaanchor avm --force
 ```
 
-Install the latest Anchor CLI:
+Install the latest TrezoaAnchor CLI:
 
 ```bash
 avm install latest
@@ -139,12 +139,12 @@ rustc --version
 # Expected: rustc 1.84.1+
 
 # Check Trezoa CLI
-solana --version
+trezoa --version
 # Expected: trezoa-cli 2.0.26+
 
-# Check Anchor CLI
-anchor --version
-# Expected: anchor-cli 0.31.1
+# Check TrezoaAnchor CLI
+trezoaanchor --version
+# Expected: trezoaanchor-cli 0.31.1
 
 # Check Node.js
 node --version
@@ -162,13 +162,13 @@ yarn --version
 Set your cluster to devnet for development:
 
 ```bash
-solana config set --url devnet
+trezoa config set --url devnet
 ```
 
 Check your current configuration:
 
 ```bash
-solana config get
+trezoa config get
 ```
 
 #### Create a Wallet
@@ -182,7 +182,7 @@ trezoa-keygen new
 Get your wallet address:
 
 ```bash
-solana address
+trezoa address
 ```
 
 #### Fund Your Wallet
@@ -196,7 +196,7 @@ trezoa airdrop 2
 Check your balance:
 
 ```bash
-solana balance
+trezoa balance
 ```
 
 **Note:** The airdrop command is limited to 5 TRZ per request and may have rate limits. Alternatively, use the [Trezoa Web Faucet](https://faucet.trezoa.com/).
@@ -206,7 +206,7 @@ solana balance
 ### Quick Setup
 
 ```bash
-pnpm create trezoa-dapp@latest -t gh:trezoa-foundation/templates/community/merkle-airdrop
+pnpm create trezoa-dapp@latest -t gh:trz-ledger-foundation/templates/community/merkle-airdrop
 ```
 
 ```bash
@@ -366,7 +366,7 @@ Below are concise TypeScript examples using the generated Codama client. These s
 Initialize airdrop:
 
 ```ts
-import { getInitializeAirdropInstruction } from './anchor/generated/clients/ts/instructions/initializeAirdrop'
+import { getInitializeAirdropInstruction } from './trezoaanchor/generated/clients/ts/instructions/initializeAirdrop'
 import { address } from '@trezoa/kit' // Trezoa Kit address helpers
 // import your client, RPC, and wallet abstractions from your app’s runtime
 
@@ -384,7 +384,7 @@ const initIx = getInitializeAirdropInstruction({
 Claim airdrop:
 
 ```ts
-import { getClaimAirdropInstruction } from './anchor/generated/clients/ts/instructions/claimAirdrop'
+import { getClaimAirdropInstruction } from './trezoaanchor/generated/clients/ts/instructions/claimAirdrop'
 import { address } from '@trezoa/kit'
 
 const proofBytes = proofHexArray.map((h) => new Uint8Array(Buffer.from(h.slice(2), 'hex')))
@@ -418,7 +418,7 @@ Gotcha: Ensure the proof, amount, and index fed to the instruction are exactly t
 
 - Limits
   - Compute budget: Proof depth increases compute cost (~O(log n)). Very deep trees need budget tuning.
-  - Account sizes: Reserve adequate space for PDAs (Anchor discriminator adds 8 bytes).
+  - Account sizes: Reserve adequate space for PDAs (TrezoaAnchor discriminator adds 8 bytes).
   - Transaction size: Large proofs or multiple instructions may approach limits; use single-claim per transaction.
 
 Gotcha: Root immutability means membership is fixed. Changing recipients requires a new root and a new airdrop state.
@@ -435,13 +435,13 @@ The test suite validates:
 - Incorrect proof or wrong amount fails verification
 - Aggregate `claimedAmount` reflects actual transfers
 
-See `anchor/tests/trezoa-distributor-comprehensive.test.ts` for end‑to‑end coverage using the generated client and Trezoa Kit helpers.
+See `trezoaanchor/tests/trezoa-distributor-comprehensive.test.ts` for end‑to‑end coverage using the generated client and Trezoa Kit helpers.
 
 ---
 
 ### Version and Compatibility Notes
 
-- Anchor CLI: 0.31.1
+- TrezoaAnchor CLI: 0.31.1
 - Trezoa CLI: 2.2.20+ (2.2.x)
 - Rust: 1.88.0+
 - Node.js: 22+
@@ -485,7 +485,7 @@ The template and generated client target these versions for consistent behavior 
 - Merkle proof: A sequence of sibling hashes used to reconstruct the root from a leaf.
 - PDA (Program Derived Address): Deterministic, program-owned address derived from seeds, not signable by a private key.
 - Lamports: Smallest unit of TRZ (1 TRZ = 1,000,000,000 lamports).
-- Discriminator: Anchor’s 8‑byte account type prefix stored in every account it manages.
+- Discriminator: TrezoaAnchor’s 8‑byte account type prefix stored in every account it manages.
 - Authority: The signer that initializes the airdrop; typically controls setup, not claims.
 - Vault: Program-owned System Account holding the lamports to distribute.
 
@@ -493,7 +493,7 @@ The template and generated client target these versions for consistent behavior 
 
 ### Gaps and Suggestions
 
-- Explicit seeds and data layouts: Document the exact PDA seeds and account layouts as compiled, including endianness and serialization formats, in `anchor/README.md` alongside the IDL.
+- Explicit seeds and data layouts: Document the exact PDA seeds and account layouts as compiled, including endianness and serialization formats, in `trezoaanchor/README.md` alongside the IDL.
 - Hashing details: Add a dedicated note specifying the leaf encoding and hash function, including byte order and any domain separators, to eliminate proof mismatches.
 - Vault lifecycle: Clarify whether the vault can be topped up, swept, or closed, and under what authority or conditions.
 - Compute guidance: Provide recommended compute budget and proof depth limits for large distributions, plus tips for splitting claims if needed.
@@ -504,10 +504,10 @@ The template and generated client target these versions for consistent behavior 
 
 ## Key Technologies
 
-- **[@trezoa/kit](https://github.com/anza-xyz/kit)**: Modern Trezoa JavaScript SDK
+- **[@trezoa/kit](https://github.com/trezoa-xyz/kit)**: Modern Trezoa JavaScript SDK
 - **[@trezoa/react-hooks](https://www.npmjs.com/package/@trezoa/react-hooks)**: React hooks for Trezoa
 - **[Codama](https://github.com/codama-idl/codama)**: Automatic client generation
-- **[Anchor Framework](https://www.anchor-lang.com/)**: Trezoa program development
+- **[TrezoaAnchor Framework](https://www.trezoaanchor-lang.com/)**: Trezoa program development
 - **[Vitest](https://vitest.dev/)**: Fast unit testing framework
 
 ---

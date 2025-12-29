@@ -19,7 +19,7 @@ import {
 // @ts-ignore error TS2307 suggest setting `moduleResolution` but this is already configured
 import { loadKeypairSignerFromFile } from 'gill/node'
 
-const { rpc, sendAndConfirmTransaction } = createTrezoaClient({ urlOrMoniker: process.env.ANCHOR_PROVIDER_URL! })
+const { rpc, sendAndConfirmTransaction } = createTrezoaClient({ urlOrMoniker: process.env.TREZOAANCHOR_PROVIDER_URL! })
 
 describe('counter', () => {
   let payer: KeyPairSigner
@@ -27,7 +27,7 @@ describe('counter', () => {
 
   beforeAll(async () => {
     counter = await generateKeyPairSigner()
-    payer = await loadKeypairSignerFromFile(process.env.ANCHOR_WALLET!)
+    payer = await loadKeypairSignerFromFile(process.env.TREZOAANCHOR_WALLET!)
   })
 
   it('Initialize Counter', async () => {

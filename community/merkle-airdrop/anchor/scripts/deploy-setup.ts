@@ -157,10 +157,10 @@ function showGillFinalSummary(result: any, deploymentAttempted: boolean): void {
   console.log('✅ Setup completed successfully with Gill + Codama!\n')
 
   console.log('📁 Files created/updated:')
-  console.log('   - anchor/deploy-wallet.json')
-  console.log('   - anchor/test-wallets.json')
-  console.log('   - anchor/recipients.json')
-  console.log('   - anchor/Anchor.toml')
+  console.log('   - trezoaanchor/deploy-wallet.json')
+  console.log('   - trezoaanchor/test-wallets.json')
+  console.log('   - trezoaanchor/recipients.json')
+  console.log('   - trezoaanchor/TrezoaAnchor.toml')
 
   if (deploymentAttempted && result.programId) {
     console.log('   - .env.local (updated with program ID)')
@@ -178,12 +178,12 @@ function showGillFinalSummary(result: any, deploymentAttempted: boolean): void {
   } else {
     console.log('4. ⏭️  Program deployment skipped')
     console.log('\n📋 Next steps:')
-    console.log('   1. Deploy: cd anchor && anchor deploy')
+    console.log('   1. Deploy: cd trezoaanchor && trezoaanchor deploy')
     console.log('   2. Initialize: npm run airdrop:init')
   }
 
-  console.log('\n💡 Wallet information saved in anchor/test-wallets.json')
-  console.log('   View with: cat anchor/test-wallets.json')
+  console.log('\n💡 Wallet information saved in trezoaanchor/test-wallets.json')
+  console.log('   View with: cat trezoaanchor/test-wallets.json')
   console.log('\n🔬 Test with Gill features:')
   console.log('   npm run airdrop:extract')
 }

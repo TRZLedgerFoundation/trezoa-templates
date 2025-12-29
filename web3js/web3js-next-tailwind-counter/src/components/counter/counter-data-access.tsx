@@ -1,12 +1,12 @@
 'use client'
 
-import { getCounterProgram, getCounterProgramId } from '@project/anchor'
+import { getCounterProgram, getCounterProgramId } from '@project/trezoaanchor'
 import { useConnection } from '@trezoa/wallet-adapter-react'
 import { Cluster, Keypair, PublicKey } from '@trezoa/web3.js'
 import { useMutation, useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
 import { useCluster } from '../cluster/cluster-data-access'
-import { useAnchorProvider } from '../trezoa/trezoa-provider'
+import { useTrezoaAnchorProvider } from '../trezoa/trezoa-provider'
 import { useTransactionToast } from '../use-transaction-toast'
 import { toast } from 'sonner'
 
@@ -14,7 +14,7 @@ export function useCounterProgram() {
   const { connection } = useConnection()
   const { cluster } = useCluster()
   const transactionToast = useTransactionToast()
-  const provider = useAnchorProvider()
+  const provider = useTrezoaAnchorProvider()
   const programId = useMemo(() => getCounterProgramId(cluster.network as Cluster), [cluster])
   const program = useMemo(() => getCounterProgram(provider, programId), [provider, programId])
 

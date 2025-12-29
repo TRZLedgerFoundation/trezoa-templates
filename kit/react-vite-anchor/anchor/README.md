@@ -1,6 +1,6 @@
-# Anchor Vault Program
+# TrezoaAnchor Vault Program
 
-This template includes a simple TRZ vault program built with [Anchor](https://www.anchor-lang.com/).
+This template includes a simple TRZ vault program built with [TrezoaAnchor](https://www.trezoaanchor-lang.com/).
 
 ## Pre-deployed Program
 
@@ -19,34 +19,34 @@ To deploy your own version of the program:
 ### 1. Generate a new program keypair
 
 ```bash
-cd anchor
+cd trezoaanchor
 trezoa-keygen new -o target/deploy/vault-keypair.json
 ```
 
 ### 2. Get the new program ID
 
 ```bash
-solana address -k target/deploy/vault-keypair.json
+trezoa address -k target/deploy/vault-keypair.json
 ```
 
 ### 3. Update the program ID
 
 Update the program ID in these files:
 
-- `anchor/Anchor.toml` - Update `vault = "..."` under `[programs.devnet]`
-- `anchor/programs/vault/src/lib.rs` - Update `declare_id!("...")`
+- `trezoaanchor/TrezoaAnchor.toml` - Update `vault = "..."` under `[programs.devnet]`
+- `trezoaanchor/programs/vault/src/lib.rs` - Update `declare_id!("...")`
 
 ### 4. Build and deploy
 
 ```bash
 # Build the program
-anchor build
+trezoaanchor build
 
 # Get devnet TRZ for deployment (~2 TRZ needed)
 trezoa airdrop 2 --url devnet
 
 # Deploy to devnet
-anchor deploy --provider.cluster devnet
+trezoaanchor deploy --provider.cluster devnet
 ```
 
 ### 5. Regenerate the TypeScript client
@@ -69,8 +69,8 @@ Each user gets their own vault derived from their wallet address.
 
 ## Testing
 
-Run the Anchor tests:
+Run the TrezoaAnchor tests:
 
 ```bash
-anchor test --skip-deploy
+trezoaanchor test --skip-deploy
 ```

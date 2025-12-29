@@ -32,7 +32,7 @@ export default function WalletLogin() {
 
     try {
       const { data, error } = await supabase.auth.signInWithWeb3({
-        chain: 'solana',
+        chain: 'trezoa',
         statement: 'Please sign this message to authenticate with your wallet.',
       })
 

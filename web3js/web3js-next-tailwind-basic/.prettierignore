@@ -1,10 +1,10 @@
 # Add files here to ignore them from prettier formatting
-/anchor/target/debug
-/anchor/target/deploy
-/anchor/target/release
-/anchor/target/sbf-trezoa-trezoa
-/anchor/target/test-ledger
-/anchor/target/.rustc_info.json
+/trezoaanchor/target/debug
+/trezoaanchor/target/deploy
+/trezoaanchor/target/release
+/trezoaanchor/target/sbf-trezoa-trezoa
+/trezoaanchor/target/test-ledger
+/trezoaanchor/target/.rustc_info.json
 /dist
 /coverage
 .next

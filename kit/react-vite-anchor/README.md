@@ -1,11 +1,11 @@
-# vite-anchor
+# vite-trezoaanchor
 
-React + Vite starter with Tailwind CSS, `@trezoa/react-hooks`, and an Anchor vault program example.
+React + Vite starter with Tailwind CSS, `@trezoa/react-hooks`, and an TrezoaAnchor vault program example.
 
 ## Getting Started
 
 ```shell
-npx create-trezoa-dapp@latest -t kit/vite-anchor
+npx create-trezoa-dapp@latest -t kit/vite-trezoaanchor
 ```
 
 ```shell
@@ -30,7 +30,7 @@ Open [http://localhost:5173](http://localhost:5173), connect your wallet, and in
 | Styling        | Tailwind CSS v4                         |
 | Trezoa Client  | `@trezoa/client`, `@trezoa/react-hooks` |
 | Program Client | Codama-generated, `@trezoa/kit`         |
-| Program        | Anchor (Rust)                           |
+| Program        | TrezoaAnchor (Rust)                           |
 
 ## Project Structure
 
@@ -41,7 +41,7 @@ Open [http://localhost:5173](http://localhost:5173), connect your wallet, and in
 │   ├── providers.tsx         # Trezoa client setup
 │   ├── generated/vault/      # Codama-generated program client
 │   └── main.tsx              # Entry point
-├── anchor/                   # Anchor workspace
+├── trezoaanchor/                   # TrezoaAnchor workspace
 │   └── programs/vault/       # Vault program (Rust)
 └── codama.json               # Codama client generation config
 ```
@@ -54,14 +54,14 @@ The included vault program is already deployed to devnet. To deploy your own:
 
 - [Rust](https://rustup.rs/)
 - [Trezoa CLI](https://trezoa.com/docs/intro/installation)
-- [Anchor](https://www.anchor-lang.com/docs/installation)
+- [TrezoaAnchor](https://www.trezoaanchor-lang.com/docs/installation)
 
 ### Steps
 
 1. **Configure Trezoa CLI for devnet**
 
    ```bash
-   solana config set --url devnet
+   trezoa config set --url devnet
    ```
 
 2. **Create a wallet (if needed) and fund it**
@@ -74,11 +74,11 @@ The included vault program is already deployed to devnet. To deploy your own:
 3. **Build and deploy the program**
 
    ```bash
-   cd anchor
-   anchor build
-   anchor keys sync    # Updates program ID in source
-   anchor build        # Rebuild with new ID
-   anchor deploy
+   cd trezoaanchor
+   trezoaanchor build
+   trezoaanchor keys sync    # Updates program ID in source
+   trezoaanchor build        # Rebuild with new ID
+   trezoaanchor deploy
    cd ..
    ```
 
@@ -93,26 +93,26 @@ The included vault program is already deployed to devnet. To deploy your own:
 Tests use [LiteSVM](https://github.com/LiteSVM/litesvm), a fast lightweight Trezoa VM for testing.
 
 ```bash
-npm run anchor-build   # Build the program first
-npm run anchor-test    # Run tests
+npm run trezoaanchor-build   # Build the program first
+npm run trezoaanchor-test    # Run tests
 ```
 
-The tests are in `anchor/programs/vault/src/tests.rs` and automatically use the program ID from `declare_id!`.
+The tests are in `trezoaanchor/programs/vault/src/tests.rs` and automatically use the program ID from `declare_id!`.
 
 ## Regenerating the Client
 
 If you modify the program, regenerate the TypeScript client:
 
 ```bash
-npm run setup   # Or: npm run anchor-build && npm run codama:js
+npm run setup   # Or: npm run trezoaanchor-build && npm run codama:js
 ```
 
-This uses [Codama](https://github.com/codama-idl/codama) to generate a type-safe client from the Anchor IDL.
+This uses [Codama](https://github.com/codama-idl/codama) to generate a type-safe client from the TrezoaAnchor IDL.
 
 ## Learn More
 
 - [Trezoa Docs](https://trezoa.com/docs) - core concepts and guides
-- [Anchor Docs](https://www.anchor-lang.com/docs) - program development framework
+- [TrezoaAnchor Docs](https://www.trezoaanchor-lang.com/docs) - program development framework
 - [Deploying Programs](https://trezoa.com/docs/programs/deploying) - deployment guide
-- [framework-kit](https://github.com/trezoa-foundation/framework-kit) - the React hooks used here
+- [framework-kit](https://github.com/trzledgerfoundation/framework-kit) - the React hooks used here
 - [Codama](https://github.com/codama-idl/codama) - client generation from IDL

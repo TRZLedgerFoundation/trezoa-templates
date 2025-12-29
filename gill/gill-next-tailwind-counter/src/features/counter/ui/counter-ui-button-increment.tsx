@@ -1,4 +1,4 @@
-import { CounterAccount } from '@project/anchor'
+import { CounterAccount } from '@project/trezoaanchor'
 import { UiWalletAccount } from '@wallet-ui/react'
 import { Button } from '@/components/ui/button'
 import { useCounterIncrementMutation } from '../data-access/use-counter-increment-mutation'

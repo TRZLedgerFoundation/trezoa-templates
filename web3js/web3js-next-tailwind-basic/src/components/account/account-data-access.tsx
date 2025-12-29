@@ -1,6 +1,6 @@
 'use client'
 
-import { TOKEN_2022_PROGRAM_ID, TOKEN_PROGRAM_ID } from '@trezoa/spl-token'
+import { TOKEN_2022_PROGRAM_ID, TOKEN_PROGRAM_ID } from '@trezoa/tpl-token'
 import { useConnection, useWallet } from '@trezoa/wallet-adapter-react'
 import {
   Connection,

@@ -1,5 +1,5 @@
 {
-  "idl": "./anchor/target/idl/vault.json",
+  "idl": "./trezoaanchor/target/idl/vault.json",
   "scripts": {
     "js": [
       {

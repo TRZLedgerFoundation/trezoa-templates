@@ -40,6 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# anchor build artifacts
-/anchor/.anchor/
-/anchor/target/
+# trezoaanchor build artifacts
+/trezoaanchor/.trezoaanchor/
+/trezoaanchor/target/

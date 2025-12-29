@@ -1,4 +1,4 @@
-import { TOKEN_2022_PROGRAM_ID, TOKEN_PROGRAM_ID } from '@trezoa/spl-token'
+import { TOKEN_2022_PROGRAM_ID, TOKEN_PROGRAM_ID } from '@trezoa/tpl-token'
 import { useConnection, useWallet } from '@trezoa/wallet-adapter-react'
 import {
   Connection,
@@ -48,14 +48,14 @@ export function useGetTokenAccounts({ address }: { address: PublicKey }) {
   })
 }
 
-export function useTransferSol({ address }: { address: PublicKey }) {
+export function useTransferTrz({ address }: { address: PublicKey }) {
   const { connection } = useConnection()
   // const transactionToast = useTransactionToast()
   const wallet = useWallet()
   const client = useQueryClient()
 
   return useMutation({
-    mutationKey: ['transfer-sol', { endpoint: connection.rpcEndpoint, address }],
+    mutationKey: ['transfer-trz', { endpoint: connection.rpcEndpoint, address }],
     mutationFn: async (input: { destination: PublicKey; amount: number }) => {
       let signature: TransactionSignature = ''
       try {

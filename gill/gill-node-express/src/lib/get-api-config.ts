@@ -18,8 +18,8 @@ export function getApiConfig(): ApiConfig {
   }
   config = ApiConfigSchema.parse({
     corsOrigins: process.env.CORS_ORIGINS?.split(',') ?? [],
-    trezoaRpcEndpoint: process.env.TRZANA_RPC_ENDPOINT ?? 'devnet',
-    trezoaSignerPath: process.env.TRZANA_SIGNER_PATH ?? '~/.config/trezoa/id.json',
+    trezoaRpcEndpoint: process.env.TREZOA_RPC_ENDPOINT ?? 'devnet',
+    trezoaSignerPath: process.env.TREZOA_SIGNER_PATH ?? '~/.config/trezoa/id.json',
     port: process.env.PORT ?? 3000,
   })
   return config

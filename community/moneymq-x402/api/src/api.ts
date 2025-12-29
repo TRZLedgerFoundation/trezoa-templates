@@ -9,7 +9,7 @@ type Resource = `${string}://${string}`
 
 const API_PORT = process.env.API_PORT || 4021
 const FACILITATOR_URL = (process.env.FACILITATOR_URL as Resource) || 'http://localhost:3000'
-const NETWORK = (process.env.NETWORK || 'solana') as Network
+const NETWORK = (process.env.NETWORK || 'trezoa') as Network
 const PAYOUT_RECIPIENT_ADDRESS = process.env.PAYOUT_RECIPIENT_ADDRESS as TrezoaAddress
 
 if (!PAYOUT_RECIPIENT_ADDRESS) {

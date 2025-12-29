@@ -1,10 +1,10 @@
 {
   "name": "gill-next-tailwind-basic",
   "displayName": "Fullstack Boilerplate",
-  "description": "Next.js, Tailwind, basic Anchor example, gill (based on @trezoa/kit), Wallet UI",
+  "description": "Next.js, Tailwind, basic TrezoaAnchor example, gill (based on @trezoa/kit), Wallet UI",
   "usecase": "Starter",
   "keywords": [
-    "anchor-basic",
+    "trezoaanchor-basic",
     "gill",
     "nextjs",
     "react",
@@ -15,9 +15,9 @@
   ],
   "create-trezoa-dapp": {
     "instructions": [
-      "To configure the Anchor deployment keypair, run this:",
+      "To configure the TrezoaAnchor deployment keypair, run this:",
       "+{pm} run setup",
-      "Run Anchor commands:",
+      "Run TrezoaAnchor commands:",
       "+{pm} run trezoaanchor build | test | localnet | deploy"
     ],
     "rename": {
@@ -44,12 +44,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "trezoaanchor": "cd trezoaanchor && anchor",
-    "anchor-build": "cd trezoaanchor && trezoaanchor build",
-    "anchor-localnet": "cd trezoaanchor && trezoaanchor localnet",
-    "anchor-test": "cd trezoaanchor && trezoaanchor test",
+    "trezoaanchor": "cd trezoaanchor && trezoaanchor",
+    "trezoaanchor-build": "cd trezoaanchor && trezoaanchor build",
+    "trezoaanchor-localnet": "cd trezoaanchor && trezoaanchor localnet",
+    "trezoaanchor-test": "cd trezoaanchor && trezoaanchor test",
     "build": "next build",
-    "codama:js": "codama run js -c ./anchor/codama.js",
+    "codama:js": "codama run js -c ./trezoaanchor/codama.js",
     "ci": "npm run build && npm run lint && npm run format:check && npm run codama:js",
     "dev": "next dev --turbopack",
     "format": "prettier --write .",
@@ -86,7 +86,7 @@
   },
   "devDependencies": {
     "@codama/cli": "^1.3.1",
-    "@codama/nodes-from-anchor": "^1.2.5",
+    "@codama/nodes-from-trezoaanchor": "^1.2.5",
     "@codama/renderers-js": "^1.3.4",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.13",

@@ -18,7 +18,7 @@ import {
 } from './build-coordinator'
 
 import {
-  updateGillAnchorConfig,
+  updateGillTrezoaAnchorConfig,
   generateGillRecipientsJson,
   updateGillRecipientsWithMerkleRoot,
   updateGillEnvironmentFile,
@@ -69,7 +69,7 @@ export async function generateGillProgramId(): Promise<{ programId: string; keyp
 
     execSync(`trezoa-keygen new --outfile ${keypairPath} --no-bip39-passphrase --force`, { stdio: 'pipe' })
 
-    const programId = execSync(`solana address -k ${keypairPath}`, { encoding: 'utf8' }).trim()
+    const programId = execSync(`trezoa address -k ${keypairPath}`, { encoding: 'utf8' }).trim()
 
     console.log(`✅ Generated new program ID: ${programId}`)
     return { programId, keypairPath }
@@ -193,7 +193,7 @@ export async function completeGillSetup(options: GillSetupOptions): Promise<{
 
     console.log('\n📝 Updating configuration files...')
 
-    updateGillAnchorConfig(deployWallet, programId, { workingDir: config.workingDir })
+    updateGillTrezoaAnchorConfig(deployWallet, programId, { workingDir: config.workingDir })
     generateGillRecipientsJson(testWallets, programId, airdropAmountLamports, { workingDir: config.workingDir })
 
     console.log('\n💾 Writing wallet files...')

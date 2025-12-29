@@ -9,7 +9,7 @@ The template uses Supabase's managed PostgreSQL database, so there's no local da
 - **Supabase Authentication** with Trezoa wallet integration via Web3 auth
 - **[Zod](https://zod.dev)** for environment variable validation (T3 Stack style)
 - **[Tailwind CSS](https://tailwindcss.com)** and **[Shadcn UI](https://ui.shadcn.com)** for styling
-- **[@trezoa/client](https://github.com/trezoa-foundation/framework-kit/tree/main/packages/client)** and **[@trezoa/react-hooks](https://github.com/trezoa-foundation/framework-kit/tree/main/packages/react-hooks)** for Trezoa wallet and RPC functionality
+- **[@trezoa/client](https://github.com/trzledgerfoundation/framework-kit/tree/main/packages/client)** and **[@trezoa/react-hooks](https://github.com/trzledgerfoundation/framework-kit/tree/main/packages/react-hooks)** for Trezoa wallet and RPC functionality
 - **Protected Routes** with authentication middleware
 - **[TypeScript](https://www.typescriptlang.org)** throughout for type safety
 
@@ -29,7 +29,7 @@ You'll also need your Supabase project URL and anon key, which you can find in y
 ### 1. Clone or fork this repository
 
 ```bash
-git clone https://github.com/trezoa-foundation/templates.git
+git clone https://github.com/trzledgerfoundation/templates.git
 cd templates/community/supabase-auth
 ```
 
@@ -166,7 +166,7 @@ A 422 error usually means:
 
 - Web3 authentication isn't enabled (see above)
 - Your Supabase project doesn't support Web3 auth (check if you're on a supported plan)
-- The `window.solana` provider isn't properly connected
+- The `window.trezoa` provider isn't properly connected
 
 #### "Trezoa wallet not detected"
 
@@ -242,7 +242,7 @@ This template uses:
 
 - [Supabase](https://supabase.com) for authentication and database
 - [Next.js](https://nextjs.org) as the React framework
-- [@trezoa/client](https://github.com/trezoa-foundation/framework-kit/tree/main/packages/client) and [@trezoa/react-hooks](https://github.com/trezoa-foundation/framework-kit/tree/main/packages/react-hooks) for Trezoa wallet and RPC functionality
+- [@trezoa/client](https://github.com/trzledgerfoundation/framework-kit/tree/main/packages/client) and [@trezoa/react-hooks](https://github.com/trzledgerfoundation/framework-kit/tree/main/packages/react-hooks) for Trezoa wallet and RPC functionality
 - [Shadcn UI](https://ui.shadcn.com) for component primitives
 
 ## License

@@ -4,7 +4,7 @@
  *
  * Usage:
  *   pnpm create-image "Next.js + Tailwind" gill/gill-next-tailwind
- *   pnpm create-image "React + Vite + Anchor" community/my-template
+ *   pnpm create-image "React + Vite + TrezoaAnchor" community/my-template
  *   pnpm create-image "x402" community/my-template --logo ./assets/x402-logo.png
  */
 
@@ -34,8 +34,8 @@ const parseArgs = (): { text: string; templatePath: string; logoPath?: string; s
     console.error('')
     console.error('Example:')
     console.error('  pnpm create-image "Next.js + Tailwind" gill/gill-next-tailwind')
-    console.error('  pnpm create-image "React + Vite + Anchor" community/my-template')
-    console.error('  pnpm create-image "Anchor" gill/gill-next-tailwind --logo ./assets/anchor-logo.svg')
+    console.error('  pnpm create-image "React + Vite + TrezoaAnchor" community/my-template')
+    console.error('  pnpm create-image "TrezoaAnchor" gill/gill-next-tailwind --logo ./assets/trezoaanchor-logo.svg')
     console.error('  pnpm create-image "x402" community/my-template --logo ./assets/x402-logo.png')
     console.error('  pnpm create-image "Next.js" gill/gill-next-tailwind --screenshot https://nextjs.org')
     return null

@@ -9,7 +9,7 @@
 import {
   isProgramError,
   type Address,
-  type TRZANA_ERROR__INSTRUCTION_ERROR__CUSTOM,
+  type TREZOA_ERROR__INSTRUCTION_ERROR__CUSTOM,
   type TrezoaError,
 } from "@trezoa/kit";
 import { VAULT_PROGRAM_ADDRESS } from "../programs";
@@ -45,7 +45,7 @@ export function isVaultError<TProgramErrorCode extends VaultError>(
     instructions: Record<number, { programAddress: Address }>;
   },
   code?: TProgramErrorCode
-): error is TrezoaError<typeof TRZANA_ERROR__INSTRUCTION_ERROR__CUSTOM> &
+): error is TrezoaError<typeof TREZOA_ERROR__INSTRUCTION_ERROR__CUSTOM> &
   Readonly<{ context: Readonly<{ code: TProgramErrorCode }> }> {
   return isProgramError<TProgramErrorCode>(
     error,

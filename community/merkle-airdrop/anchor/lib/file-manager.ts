@@ -8,17 +8,17 @@ export interface GillFileConfig {
   network?: 'devnet' | 'mainnet' | 'testnet'
 }
 
-export function updateGillAnchorConfig(
+export function updateGillTrezoaAnchorConfig(
   deployWallet: GillWalletInfo,
   programId: string | Address,
   config: GillFileConfig = {},
 ): void {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   const programIdStr = typeof programId === 'string' ? programId : programId
 
-  const anchorToml = `[toolchain]
-anchor_version = "0.31.1"
+  const trezoaanchorToml = `[toolchain]
+trezoaanchor_version = "0.31.1"
 package_manager = "pnpm"
 
 [features]
@@ -39,9 +39,9 @@ wallet = "${deployWallet.keypairFile}"
 test = "pnpm run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
 `
 
-  const anchorTomlPath = `${workingDir}/Anchor.toml`
-  fs.writeFileSync(anchorTomlPath, anchorToml)
-  console.log(`✅ Updated ${anchorTomlPath} to use ${deployWallet.keypairFile} (Gill)`)
+  const trezoaanchorTomlPath = `${workingDir}/TrezoaAnchor.toml`
+  fs.writeFileSync(trezoaanchorTomlPath, trezoaanchorToml)
+  console.log(`✅ Updated ${trezoaanchorTomlPath} to use ${deployWallet.keypairFile} (Gill)`)
 }
 
 export function generateGillRecipientsJson(
@@ -50,7 +50,7 @@ export function generateGillRecipientsJson(
   airdropAmountLamports: number = 75000000, // Default: 0.075 TRZ
   config: GillFileConfig = {},
 ): void {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   // Convert Address to string if needed
   const programIdStr = typeof programId === 'string' ? programId : programId
@@ -105,7 +105,7 @@ export function generateGillRecipientsJson(
 }
 
 export function updateGillRecipientsWithMerkleRoot(merkleRoot: string, config: GillFileConfig = {}): void {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   try {
     const recipientsPath = `${workingDir}/recipients.json`
@@ -131,20 +131,20 @@ export function updateGillEnvironmentFile(
   try {
     console.log('📝 Updating environment file with program ID and test wallet... (Gill)')
 
-    const { workingDir = 'anchor' } = config
+    const { workingDir = 'trezoaanchor' } = config
     const programIdStr = typeof programId === 'string' ? programId : programId
 
     // Determine the correct path to the environment file
     const envFileName = '.env.local'
     let envFile: string
-    if (workingDir === 'anchor' || workingDir === '.') {
+    if (workingDir === 'trezoaanchor' || workingDir === '.') {
       envFile = `../${envFileName}`
     } else {
       envFile = envFileName
     }
 
     if (!fs.existsSync(envFile)) {
-      const altEnvFile = workingDir === 'anchor' || workingDir === '.' ? '../.env' : '.env'
+      const altEnvFile = workingDir === 'trezoaanchor' || workingDir === '.' ? '../.env' : '.env'
       if (fs.existsSync(altEnvFile)) {
         envFile = altEnvFile
       }
@@ -152,7 +152,7 @@ export function updateGillEnvironmentFile(
 
     let envContent = ''
     const programIdVar = `NEXT_PUBLIC_PROGRAM_ID=${programIdStr}`
-    const networkVar = `NEXT_PUBLIC_TRZANA_NETWORK=devnet`
+    const networkVar = `NEXT_PUBLIC_TREZOA_NETWORK=devnet`
 
     // Get the first test wallet's private key for the environment
     let privateKeyVar = ''
@@ -171,8 +171,8 @@ export function updateGillEnvironmentFile(
         envContent = envContent.trim() + `\n${programIdVar}\n`
       }
 
-      if (envContent.includes('NEXT_PUBLIC_TRZANA_NETWORK=')) {
-        envContent = envContent.replace(/NEXT_PUBLIC_TRZANA_NETWORK=.*/, networkVar)
+      if (envContent.includes('NEXT_PUBLIC_TREZOA_NETWORK=')) {
+        envContent = envContent.replace(/NEXT_PUBLIC_TREZOA_NETWORK=.*/, networkVar)
       } else {
         envContent = envContent.trim() + `\n${networkVar}\n`
       }
@@ -217,23 +217,23 @@ export function updateGillFrontendRecipientsFile(config: GillFileConfig = {}): v
   try {
     console.log('🎨 Updating frontend recipients file... (Gill)')
 
-    const { workingDir = 'anchor' } = config
-    const anchorRecipientsPath = `${workingDir}/recipients.json`
+    const { workingDir = 'trezoaanchor' } = config
+    const trezoaanchorRecipientsPath = `${workingDir}/recipients.json`
     // Determine the correct path to the frontend file
     let frontendRecipientsPath: string
-    if (workingDir === 'anchor' || workingDir === '.') {
+    if (workingDir === 'trezoaanchor' || workingDir === '.') {
       frontendRecipientsPath = '../src/lib/recipients.ts'
     } else {
       frontendRecipientsPath = 'src/lib/recipients.ts'
     }
 
-    // Load the anchor recipients data
-    if (!fs.existsSync(anchorRecipientsPath)) {
-      console.log(`⚠️  Anchor recipients file not found: ${anchorRecipientsPath}`)
+    // Load the trezoaanchor recipients data
+    if (!fs.existsSync(trezoaanchorRecipientsPath)) {
+      console.log(`⚠️  TrezoaAnchor recipients file not found: ${trezoaanchorRecipientsPath}`)
       return
     }
 
-    const recipientsData: RecipientsFile = JSON.parse(fs.readFileSync(anchorRecipientsPath, 'utf8'))
+    const recipientsData: RecipientsFile = JSON.parse(fs.readFileSync(trezoaanchorRecipientsPath, 'utf8'))
 
     // Generate the TypeScript content for the frontend
     const frontendContent = `/**
@@ -291,7 +291,7 @@ export type { RecipientFromJson, RecipientsFile }
 }
 
 export function loadGillRecipientsFile(filePath?: string, config: GillFileConfig = {}): RecipientsFile {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
   const recipientsPath = filePath || `${workingDir}/recipients.json`
 
   if (!fs.existsSync(recipientsPath)) {
@@ -307,7 +307,7 @@ export function loadGillRecipientsFile(filePath?: string, config: GillFileConfig
 }
 
 export function writeGillWalletFile(wallet: GillWalletInfo, config: GillFileConfig = {}): void {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   try {
     const walletPath = path.join(workingDir, wallet.keypairFile)
@@ -322,7 +322,7 @@ export function writeGillWalletFile(wallet: GillWalletInfo, config: GillFileConf
 }
 
 export function writeGillTestWalletsFile(testWallets: GillWalletInfo[], config: GillFileConfig = {}): void {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   try {
     const testWalletsPath = path.join(workingDir, 'test-wallets.json')
@@ -357,11 +357,11 @@ export function writeGillTestWalletsFile(testWallets: GillWalletInfo[], config: 
 }
 
 export function getGillCurrentProgramId(config: GillFileConfig = {}): string {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   try {
-    const anchorContent = fs.readFileSync(`${workingDir}/Anchor.toml`, 'utf8')
-    const match = anchorContent.match(/trezoa_distributor = "([^"]+)"/)
+    const trezoaanchorContent = fs.readFileSync(`${workingDir}/TrezoaAnchor.toml`, 'utf8')
+    const match = trezoaanchorContent.match(/trezoa_distributor = "([^"]+)"/)
     if (match) {
       return match[1]
     }
@@ -380,17 +380,17 @@ export function getGillCurrentProgramId(config: GillFileConfig = {}): string {
 }
 
 export function getGillCodamaProgramId(config: GillFileConfig = {}): string | null {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   try {
-    const codamaClientPath = path.join(workingDir, 'generated', 'clients', 'ts', 'programs', 'solanaDistributor.ts')
+    const codamaClientPath = path.join(workingDir, 'generated', 'clients', 'ts', 'programs', 'trezoaDistributor.ts')
 
     if (!fs.existsSync(codamaClientPath)) {
       return null
     }
 
     const codamaContent = fs.readFileSync(codamaClientPath, 'utf8')
-    const match = codamaContent.match(/TRZANA_DISTRIBUTOR_PROGRAM_ADDRESS\s*=\s*'([^']+)'/)
+    const match = codamaContent.match(/TREZOA_DISTRIBUTOR_PROGRAM_ADDRESS\s*=\s*'([^']+)'/)
 
     if (match) {
       return match[1]
@@ -404,7 +404,7 @@ export function getGillCodamaProgramId(config: GillFileConfig = {}): string | nu
 }
 
 export async function ensureGillCodamaSync(config: GillFileConfig = {}): Promise<boolean> {
-  const { workingDir = 'anchor' } = config
+  const { workingDir = 'trezoaanchor' } = config
 
   try {
     const currentProgramId = getGillCurrentProgramId(config)

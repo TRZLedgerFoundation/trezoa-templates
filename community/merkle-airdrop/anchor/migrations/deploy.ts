@@ -1,11 +1,11 @@
 // Modern Gill-based deployment migration
-// This replaces the legacy Anchor provider approach with Gill + Codama
+// This replaces the legacy TrezoaAnchor provider approach with Gill + Codama
 
 import { runGillDeploymentSetup } from '../scripts/deploy-setup'
 
 /**
  * Gill-based migration that deploys the program using modern Trezoa tooling
- * This is called by `anchor deploy` and uses our Gill deployment pipeline
+ * This is called by `trezoaanchor deploy` and uses our Gill deployment pipeline
  */
 export default async function (_provider?: any) {
   console.log('🚀 Running Gill-based deployment migration...\n')
@@ -21,5 +21,5 @@ export default async function (_provider?: any) {
   }
 }
 
-// For Anchor compatibility (Anchor expects module.exports)
+// For TrezoaAnchor compatibility (TrezoaAnchor expects module.exports)
 module.exports = exports.default

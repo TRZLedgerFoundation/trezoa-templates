@@ -2,7 +2,7 @@
   "name": "web3js-react-vite-tailwind-counter",
   "displayName": "Web3js Counter",
   "usecase": "Legacy",
-  "description": "React + Vite, Tailwind, @trezoa/web3.js, Wallet Adapter, Anchor Counter program",
+  "description": "React + Vite, Tailwind, @trezoa/web3.js, Wallet Adapter, TrezoaAnchor Counter program",
   "keywords": [
     "trezoaanchor-counter",
     "web3js",
@@ -17,10 +17,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "trezoaanchor": "cd trezoaanchor && anchor",
-    "anchor-build": "cd trezoaanchor && trezoaanchor build",
-    "anchor-localnet": "cd trezoaanchor && trezoaanchor localnet",
-    "anchor-test": "cd trezoaanchor && trezoaanchor test",
+    "trezoaanchor": "cd trezoaanchor && trezoaanchor",
+    "trezoaanchor-build": "cd trezoaanchor && trezoaanchor build",
+    "trezoaanchor-localnet": "cd trezoaanchor && trezoaanchor localnet",
+    "trezoaanchor-test": "cd trezoaanchor && trezoaanchor test",
     "build": "tsc -b && vite build",
     "ci": "npm run build && npm run lint && npm run format:check",
     "dev": "vite",
@@ -30,12 +30,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@trezoa-xyz/anchor": "^0.31.1",
+    "@trezoa-xyz/trezoaanchor": "^0.31.1",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-label": "^2.1.7",
     "@radix-ui/react-slot": "^1.2.3",
-    "@trezoa/spl-token": "0.4.14",
+    "@trezoa/tpl-token": "0.4.14",
     "@trezoa/wallet-adapter-base": "0.9.27",
     "@trezoa/wallet-adapter-react": "0.15.39",
     "@trezoa/wallet-adapter-react-ui": "0.9.39",

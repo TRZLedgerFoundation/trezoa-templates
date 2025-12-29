@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-anchor",
-  "description": "Next.js, Tailwind, @trezoa/react-hooks, Anchor vault program",
+  "name": "nextjs-trezoaanchor",
+  "description": "Next.js, Tailwind, @trezoa/react-hooks, TrezoaAnchor vault program",
   "keywords": [
     "trezoaanchor",
     "kit",
@@ -23,8 +23,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "anchor-build": "cd trezoaanchor && trezoaanchor build",
-    "anchor-test": "cd trezoaanchor && trezoaanchor test --skip-deploy",
+    "trezoaanchor-build": "cd trezoaanchor && trezoaanchor build",
+    "trezoaanchor-test": "cd trezoaanchor && trezoaanchor test --skip-deploy",
     "build": "next build",
     "ci": "npm run build && npm run lint && npm run format:check",
     "codama:js": "codama run js",
@@ -32,7 +32,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint",
-    "setup": "npm run anchor-build && npm run codama:js",
+    "setup": "npm run trezoaanchor-build && npm run codama:js",
     "start": "next start"
   },
   "dependencies": {
@@ -45,7 +45,7 @@
     "ws": "^8.18.3"
   },
   "devDependencies": {
-    "@codama/nodes-from-anchor": "^1.3.8",
+    "@codama/nodes-from-trezoaanchor": "^1.3.8",
     "@codama/renderers-js": "^1.5.5",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

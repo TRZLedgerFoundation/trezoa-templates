@@ -27,13 +27,13 @@ dist-ssr
 *.tsbuildinfo
 /tmp
 
-# Anchor
-/anchor/.anchor
-/anchor/target/debug
-/anchor/target/deploy
-/anchor/target/release
-/anchor/target/sbf-trezoa-trezoa
-/anchor/target/test-ledger
-/anchor/target/.rustc_info.json
+# TrezoaTrezoaAnchor
+/trezoatrezoaanchor/.trezoaanchor
+/trezoatrezoaanchor/target/debug
+/trezoatrezoaanchor/target/deploy
+/trezoatrezoaanchor/target/release
+/trezoatrezoaanchor/target/sbf-trezoa-trezoa
+/trezoatrezoaanchor/target/test-ledger
+/trezoatrezoaanchor/target/.rustc_info.json
 test-ledger
 **/*.rs.bk

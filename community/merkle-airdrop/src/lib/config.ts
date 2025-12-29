@@ -4,12 +4,12 @@
  *
  * 💡 For development: Uses mock program ID by default
  * 🚀 For production: Set NEXT_PUBLIC_PROGRAM_ID environment variable
- *    (automatically set when you run anchor/scripts/deploy-setup.ts)
+ *    (automatically set when you run trezoaanchor/scripts/deploy-setup.ts)
  */
 
 export const AIRDROP_CONFIG = {
   // Network settings
-  NETWORK: (process.env.NEXT_PUBLIC_TRZANA_NETWORK || 'devnet') as 'devnet' | 'mainnet' | 'testnet',
+  NETWORK: (process.env.NEXT_PUBLIC_TREZOA_NETWORK || 'devnet') as 'devnet' | 'mainnet' | 'testnet',
 
   // Program addresses (mock ID will be updated by deploy-setup script)
   AIRDROP_PROGRAM_ID: process.env.NEXT_PUBLIC_PROGRAM_ID,

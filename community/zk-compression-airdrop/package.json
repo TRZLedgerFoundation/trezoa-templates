@@ -44,7 +44,7 @@
     "@trezoa/client": "^1.1.0",
     "@trezoa/kit": "^5.0.0",
     "@trezoa/react-hooks": "^1.1.0",
-    "@trezoa/spl-token": "^0.4.14",
+    "@trezoa/tpl-token": "^0.4.14",
     "@trezoa/web3.js": "^1.98.4",
     "bn.js": "^5.2.1",
     "bs58": "^6.0.0",
@@ -64,7 +64,7 @@
     "tw-animate-css": "^1.3.8"
   },
   "devDependencies": {
-    "@trezoa-xyz/anchor": "^0.31.1",
+    "@trezoa-xyz/trezoaanchor": "^0.31.1",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/bn.js": "^5.1.0",

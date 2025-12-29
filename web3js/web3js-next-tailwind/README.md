@@ -12,7 +12,7 @@ This is a Next.js app containing:
 #### Download the template
 
 ```shell
-pnpm create trezoa-dapp@latest -t gh:trezoa-foundation/templates/web3js/web3js-next-tailwind
+pnpm create trezoa-dapp@latest -t gh:trzledgerfoundation/templates/web3js/web3js-next-tailwind
 ```
 
 #### Install Dependencies

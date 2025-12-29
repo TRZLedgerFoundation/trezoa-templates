@@ -231,13 +231,13 @@ export async function distributeSolToWallets(
 
       const { execSync } = require('child_process')
 
-      let keypairFile = fromWallet.keypairFile || 'anchor/deploy-wallet.json'
+      let keypairFile = fromWallet.keypairFile || 'trezoaanchor/deploy-wallet.json'
 
-      if (keypairFile === 'deploy-wallet.json' && !process.cwd().endsWith('/anchor')) {
-        keypairFile = 'anchor/deploy-wallet.json'
+      if (keypairFile === 'deploy-wallet.json' && !process.cwd().endsWith('/trezoaanchor')) {
+        keypairFile = 'trezoaanchor/deploy-wallet.json'
       }
       const result = execSync(
-        `solana transfer ${wallet.address} ${amountPerWallet} --allow-unfunded-recipient --keypair ${keypairFile} --url devnet`,
+        `trezoa transfer ${wallet.address} ${amountPerWallet} --allow-unfunded-recipient --keypair ${keypairFile} --url devnet`,
         { encoding: 'utf8', cwd: process.cwd() },
       )
 

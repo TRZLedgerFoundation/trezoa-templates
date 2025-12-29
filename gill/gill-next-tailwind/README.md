@@ -13,7 +13,7 @@ This is a Next.js app containing:
 #### Create an app using this template
 
 ```shell
-npx create-trezoa-dapp@latest -t gh:trezoa-foundation/templates/gill/gill-next-tailwind
+npx create-trezoa-dapp@latest -t gh:trzledgerfoundation/templates/gill/gill-next-tailwind
 ```
 
 #### Install Dependencies

@@ -13,7 +13,7 @@ import React from 'react'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT_DIR = join(__dirname, '..', '..')
-const LOGO_PATH = join(ROOT_DIR, 'assets', 'solana-logo.svg')
+const LOGO_PATH = join(ROOT_DIR, 'assets', 'trezoa-logo.svg')
 
 export const IMAGE_WIDTH = 1200
 export const IMAGE_HEIGHT = 630
@@ -134,7 +134,7 @@ export const generateOgImage = async (
     return err(`Failed to read Trezoa logo: ${logoResult.error}`)
   }
 
-  const solanaLogoDataUri = logoResult.value
+  const trezoaLogoDataUri = logoResult.value
 
   // If custom logo provided, read it
   let customLogoDataUri: string | undefined
@@ -168,7 +168,7 @@ export const generateOgImage = async (
               gap: '60px',
             }}
           >
-            <img src={solanaLogoDataUri} width={200} height={175} alt="Trezoa" />
+            <img src={trezoaLogoDataUri} width={200} height={175} alt="Trezoa" />
 
             <div
               style={{

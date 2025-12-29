@@ -12,8 +12,8 @@ export default defineConfig({
     include: ['tests/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
     exclude: ['node_modules', 'dist', 'target'],
     env: {
-      ANCHOR_PROVIDER_URL: 'https://api.devnet.trezoa.com',
-      ANCHOR_WALLET: './deploy-wallet.json',
+      TREZOAANCHOR_PROVIDER_URL: 'https://api.devnet.trezoa.com',
+      TREZOAANCHOR_WALLET: './deploy-wallet.json',
     },
   },
   build: {

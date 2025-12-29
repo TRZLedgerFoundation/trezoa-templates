@@ -50,11 +50,11 @@ export default function Home() {
               <div>
                 <a
                   className="font-medium underline underline-offset-2"
-                  href="https://www.anchor-lang.com/docs/introduction"
+                  href="https://www.trezoaanchor-lang.com/docs/introduction"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Anchor docs
+                  TrezoaAnchor docs
                 </a>{" "}
                 — build and test programs with IDL, macros, and type-safe
                 clients.
@@ -85,7 +85,7 @@ export default function Home() {
               <div>
                 <a
                   className="font-medium underline underline-offset-2"
-                  href="https://github.com/trezoa-foundation/framework-kit/tree/main/packages/react-hooks"
+                  href="https://github.com/trzledgerfoundation/framework-kit/tree/main/packages/react-hooks"
                   target="_blank"
                   rel="noreferrer"
                 >

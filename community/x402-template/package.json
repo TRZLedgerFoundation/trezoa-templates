@@ -6,7 +6,7 @@
   "description": "Next.js Trezoa starter with X402 payment protocol integration",
   "usecase": "Payments",
   "keywords": [
-    "solana",
+    "trezoa",
     "nextjs",
     "x402",
     "template",

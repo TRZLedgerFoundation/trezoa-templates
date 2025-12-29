@@ -1,15 +1,15 @@
-import * as anchor from '@trezoa-xyz/anchor'
-import { Program } from '@trezoa-xyz/anchor'
+import * as trezoaanchor from '@trezoa-xyz/trezoaanchor'
+import { Program } from '@trezoa-xyz/trezoaanchor'
 import { Keypair } from '@trezoa/web3.js'
 import { Counter } from '../target/types/counter'
 
 describe('counter', () => {
   // Configure the client to use the local cluster.
-  const provider = anchor.AnchorProvider.env()
-  anchor.setProvider(provider)
-  const payer = provider.wallet as anchor.Wallet
+  const provider = trezoaanchor.TrezoaAnchorProvider.env()
+  trezoaanchor.setProvider(provider)
+  const payer = provider.wallet as trezoaanchor.Wallet
 
-  const program = anchor.workspace.Counter as Program<Counter>
+  const program = trezoaanchor.workspace.Counter as Program<Counter>
 
   const counterKeypair = Keypair.generate()
 

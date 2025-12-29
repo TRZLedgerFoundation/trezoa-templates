@@ -13,7 +13,7 @@ This is a React/Vite app containing:
 #### Download the template
 
 ```shell
-npx create-trezoa-dapp@latest -t gh:trezoa-foundation/templates/gill/gill-react-vite-tailwind
+npx create-trezoa-dapp@latest -t gh:trzledgerfoundation/templates/gill/gill-react-vite-tailwind
 ```
 
 #### Install Dependencies

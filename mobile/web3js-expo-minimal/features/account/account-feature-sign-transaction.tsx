@@ -1,7 +1,7 @@
 import { PublicKey, TransactionMessage, VersionedTransaction } from '@trezoa/web3.js'
 import { Button, View } from 'react-native'
 import { appStyles } from '@/constants/app-styles'
-import { createMemoInstruction } from '@trezoa/spl-memo'
+import { createMemoInstruction } from '@trezoa/tpl-memo'
 import { useMobileWalletAdapter } from '@wallet-ui/react-native-web3js'
 
 export function AccountFeatureSignTransaction({ publicKey }: { publicKey: PublicKey }) {

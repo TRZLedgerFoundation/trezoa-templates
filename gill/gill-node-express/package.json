@@ -35,7 +35,7 @@
     "ci": "npm run build",
     "dev": "esrun --watch src/index.ts",
     "docker:build": "docker build -t gill-node-express:latest .",
-    "docker:run": "docker run --rm --name gill-node-express -p 3000:3000 --env-file .env -e TRZANA_SIGNER_PATH=keypair-signer.json -v ./keypair-signer.json:/srv/api/keypair-signer.json gill-node-express:latest",
+    "docker:run": "docker run --rm --name gill-node-express -p 3000:3000 --env-file .env -e TREZOA_SIGNER_PATH=keypair-signer.json -v ./keypair-signer.json:/srv/api/keypair-signer.json gill-node-express:latest",
     "fmt": "prettier --write .",
     "fmt:check": "prettier --check .",
     "setup": "npm run setup-env && npm run setup-keypair-signer",

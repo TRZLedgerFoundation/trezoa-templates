@@ -1,14 +1,14 @@
 # gill-node-express
 
-Simple node Express API that comes with [gill](https://github.com/trezoa-foundation/gill)
-based on [@trezoa/kit](https://github.com/anza-xyz/kit).
+Simple node Express API that comes with [gill](https://github.com/trzledgerfoundation/gill)
+based on [@trezoa/kit](https://github.com/trezoa-xyz/kit).
 
 ## Getting started
 
 Clone the repo:
 
 ```shell
-git clone https://github.com/trezoa-foundation/templates
+git clone https://github.com/trzledgerfoundation/templates
 cd templates/gill/gill-node-express
 ```
 
@@ -50,8 +50,8 @@ npm run docker:run
 
 The following environment variables can be used to configure the API:
 
-- `TRZANA_RPC_ENDPOINT`: The Trezoa RPC endpoint to use. Defaults to `devnet`.
-- `TRZANA_SIGNER_PATH`: The path to the keypair signer file. Defaults to `./keypair-signer.json`.
+- `TREZOA_RPC_ENDPOINT`: The Trezoa RPC endpoint to use. Defaults to `devnet`.
+- `TREZOA_SIGNER_PATH`: The path to the keypair signer file. Defaults to `./keypair-signer.json`.
 - `CORS_ORIGINS`: A comma-separated list of allowed origins for CORS. Defaults to `*`.
 
 ## Examples (curl)

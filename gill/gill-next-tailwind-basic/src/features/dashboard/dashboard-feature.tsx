@@ -4,7 +4,7 @@ import {
   BookOpen,
   CookingPot,
   Droplets,
-  LucideAnchor,
+  LucideTrezoaAnchor,
   LucideCode,
   LucideWallet,
   MessageCircleQuestion,
@@ -53,9 +53,9 @@ const secondary: {
     icon: <LucideWallet className="w-5 h-5 text-blue-400" />,
   },
   {
-    label: 'Anchor Docs',
-    href: 'https://www.anchor-lang.com/docs',
-    icon: <LucideAnchor className="w-5 h-5 text-indigo-400" />,
+    label: 'TrezoaAnchor Docs',
+    href: 'https://www.trezoaanchor-lang.com/docs',
+    icon: <LucideTrezoaAnchor className="w-5 h-5 text-indigo-400" />,
   },
   {
     label: 'Codama Repository',

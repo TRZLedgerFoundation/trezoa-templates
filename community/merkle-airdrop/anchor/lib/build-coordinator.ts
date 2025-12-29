@@ -26,12 +26,12 @@ export function getGillSourceHash(config: GillBuildConfig = {}): string {
   try {
     const libPath = `${workingDir}/programs/trezoa-distributor/src/lib.rs`
     const cargoPath = `${workingDir}/programs/trezoa-distributor/Cargo.toml`
-    const anchorPath = `${workingDir}/Anchor.toml`
+    const trezoaanchorPath = `${workingDir}/TrezoaAnchor.toml`
 
     const sources = [
       fs.existsSync(libPath) ? fs.readFileSync(libPath, 'utf8') : '',
       fs.existsSync(cargoPath) ? fs.readFileSync(cargoPath, 'utf8') : '',
-      fs.existsSync(anchorPath) ? fs.readFileSync(anchorPath, 'utf8') : '',
+      fs.existsSync(trezoaanchorPath) ? fs.readFileSync(trezoaanchorPath, 'utf8') : '',
     ].join('')
 
     return Buffer.from(sources).toString('base64')
@@ -44,15 +44,15 @@ export function checkGillProgramIdConsistency(config: GillBuildConfig = {}): {
   consistent: boolean
   declaredId: string | null
   deployedId: string | null
-  anchorId: string | null
+  trezoaanchorId: string | null
 } {
   const declaredId = getGillDeclaredProgramId(config)
   const deployedId = getGillDeployedProgramId(config)
-  const anchorId = getGillAnchorProgramId(config)
+  const trezoaanchorId = getGillTrezoaAnchorProgramId(config)
 
-  const consistent = declaredId && deployedId && anchorId && declaredId === deployedId && declaredId === anchorId
+  const consistent = declaredId && deployedId && trezoaanchorId && declaredId === deployedId && declaredId === trezoaanchorId
 
-  return { consistent: !!consistent, declaredId, deployedId, anchorId }
+  return { consistent: !!consistent, declaredId, deployedId, trezoaanchorId }
 }
 
 export function getGillDeclaredProgramId(config: GillBuildConfig = {}): string | null {
@@ -71,7 +71,7 @@ export function getGillDeployedProgramId(config: GillBuildConfig = {}): string |
   const { workingDir = '.' } = config
 
   try {
-    const output = execSync(`solana address -k ${workingDir}/target/deploy/trezoa_distributor-keypair.json`, {
+    const output = execSync(`trezoa address -k ${workingDir}/target/deploy/trezoa_distributor-keypair.json`, {
       encoding: 'utf8',
     })
     return output.trim()
@@ -80,12 +80,12 @@ export function getGillDeployedProgramId(config: GillBuildConfig = {}): string |
   }
 }
 
-export function getGillAnchorProgramId(config: GillBuildConfig = {}): string | null {
+export function getGillTrezoaAnchorProgramId(config: GillBuildConfig = {}): string | null {
   const { workingDir = '.' } = config
 
   try {
-    const anchorContent = fs.readFileSync(`${workingDir}/Anchor.toml`, 'utf8')
-    const match = anchorContent.match(/trezoa_distributor = "([^"]+)"/)
+    const trezoaanchorContent = fs.readFileSync(`${workingDir}/TrezoaAnchor.toml`, 'utf8')
+    const match = trezoaanchorContent.match(/trezoa_distributor = "([^"]+)"/)
     return match ? match[1] : null
   } catch {
     return null
@@ -108,7 +108,7 @@ export async function buildGillProgramIfNeeded(
     }
 
     console.log('🔨 Building program with Gill...')
-    execSync('anchor build', {
+    execSync('trezoaanchor build', {
       stdio: verbose ? 'inherit' : 'pipe',
       cwd: workingDir,
     })
@@ -151,7 +151,7 @@ export async function deployGillProgram(
     }
 
     console.log('📡 Deploying program with Gill...')
-    const deployOutput = execSync('anchor deploy', {
+    const deployOutput = execSync('trezoaanchor deploy', {
       stdio: verbose ? 'inherit' : 'pipe',
       cwd: workingDir,
       encoding: 'utf8',
@@ -196,7 +196,7 @@ export async function ensureGillProgramIdConsistency(
     return true
   }
 
-  const newProgramId = targetProgramIdStr || consistency.deployedId || consistency.declaredId || consistency.anchorId
+  const newProgramId = targetProgramIdStr || consistency.deployedId || consistency.declaredId || consistency.trezoaanchorId
   if (!newProgramId) {
     console.error('❌ No valid program ID found to ensure consistency')
     return false
@@ -221,13 +221,13 @@ export async function ensureGillProgramIdConsistency(
   }
 
   try {
-    const anchorPath = `${workingDir}/Anchor.toml`
-    let anchorContent = fs.readFileSync(anchorPath, 'utf8')
-    anchorContent = anchorContent.replace(/trezoa_distributor = ".*"/, `trezoa_distributor = "${newProgramId}"`)
-    fs.writeFileSync(anchorPath, anchorContent)
-    console.log('   ✅ Updated Anchor.toml')
+    const trezoaanchorPath = `${workingDir}/TrezoaAnchor.toml`
+    let trezoaanchorContent = fs.readFileSync(trezoaanchorPath, 'utf8')
+    trezoaanchorContent = trezoaanchorContent.replace(/trezoa_distributor = ".*"/, `trezoa_distributor = "${newProgramId}"`)
+    fs.writeFileSync(trezoaanchorPath, trezoaanchorContent)
+    console.log('   ✅ Updated TrezoaAnchor.toml')
   } catch (error) {
-    console.error('   ❌ Failed to update Anchor.toml:', error)
+    console.error('   ❌ Failed to update TrezoaAnchor.toml:', error)
     return false
   }
 
@@ -248,7 +248,7 @@ export async function cleanGillBuildArtifacts(config: GillBuildConfig = {}): Pro
 
   try {
     console.log('🧹 Cleaning build artifacts... (Gill)')
-    execSync('anchor clean', {
+    execSync('trezoaanchor clean', {
       stdio: verbose ? 'inherit' : 'pipe',
       cwd: workingDir,
     })

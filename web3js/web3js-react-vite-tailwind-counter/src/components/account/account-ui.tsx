@@ -11,7 +11,7 @@ import {
   useGetSignatures,
   useGetTokenAccounts,
   useRequestAirdrop,
-  useTransferSol,
+  useTransferTrz,
 } from './account-data-access'
 import { ellipsify } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -26,7 +26,7 @@ export function AccountBalance({ address }: { address: PublicKey }) {
 
   return (
     <h1 className="text-5xl font-bold cursor-pointer" onClick={() => query.refetch()}>
-      {query.data ? <BalanceSol balance={query.data} /> : '...'} TRZ
+      {query.data ? <BalanceTrz balance={query.data} /> : '...'} TRZ
     </h1>
   )
 }
@@ -244,7 +244,7 @@ export function AccountTransactions({ address }: { address: PublicKey }) {
   )
 }
 
-function BalanceSol({ balance }: { balance: number }) {
+function BalanceTrz({ balance }: { balance: number }) {
   return <span>{Math.round((balance / LAMPORTS_PER_TRZ) * 100000) / 100000}</span>
 }
 
@@ -285,7 +285,7 @@ function ModalAirdrop({ address }: { address: PublicKey }) {
 
 function ModalSend({ address }: { address: PublicKey }) {
   const wallet = useWallet()
-  const mutation = useTransferSol({ address })
+  const mutation = useTransferTrz({ address })
   const [destination, setDestination] = useState('')
   const [amount, setAmount] = useState('1')
 

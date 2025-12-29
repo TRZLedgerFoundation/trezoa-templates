@@ -10,11 +10,11 @@ import { Address, createTrezoaClient, getMonikerFromGenesisHash, isAddress, lamp
 import { loadKeypairSignerFromFile } from 'gill/node'
 
 // Get the Trezoa RPC endpoint from the environment variable or default to devnet
-const urlOrMoniker = process.env.TRZANA_RPC_ENDPOINT || 'devnet'
+const urlOrMoniker = process.env.TREZOA_RPC_ENDPOINT || 'devnet'
 const client = createTrezoaClient({ urlOrMoniker })
 
 // Load the keypair from the .env file or use the default (~/.config/trezoa/id.json)
-const signer = await loadKeypairSignerFromFile(process.env.TRZANA_SIGNER_PATH)
+const signer = await loadKeypairSignerFromFile(process.env.TREZOA_SIGNER_PATH)
 
 // BELOW IS AN EXAMPLE, YOU CAN REMOVE IT AND REPLACE IT WITH YOUR OWN CODE
 

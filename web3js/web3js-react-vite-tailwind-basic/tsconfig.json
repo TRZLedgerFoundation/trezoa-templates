@@ -11,7 +11,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@project/anchor": ["anchor/src"],
+      "@project/trezoaanchor": ["trezoaanchor/src"],
       "@/*": ["./src/*"]
     }
   }

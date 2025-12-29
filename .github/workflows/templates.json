@@ -1,5 +1,5 @@
 [
-  "community/gill-node-solanax402",
+  "community/gill-node-trezoax402",
   "community/merkle-airdrop",
   "community/moneymq-x402",
   "community/trezoa-chatgpt-kit",
@@ -18,9 +18,9 @@
   "gill/gill-react-vite-tailwind-counter",
   "gill/gill-react-vite-tailwind-minimal",
   "kit/nextjs",
-  "kit/nextjs-anchor",
+  "kit/nextjs-trezoaanchor",
   "kit/react-vite",
-  "kit/react-vite-anchor",
+  "kit/react-vite-trezoaanchor",
   "mobile/web3js-expo",
   "mobile/web3js-expo-minimal",
   "mobile/web3js-expo-paper",

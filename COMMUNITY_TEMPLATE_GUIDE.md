@@ -32,7 +32,7 @@ templates/
     └── your-template-name/
         ├── package.json          (required - with metadata)
         ├── og-image.png          (required - 1200x630 pixels)
-        └── ...                   (any structure: src/, anchor/, programs/, etc.)
+        └── ...                   (any structure: src/, trezoaanchor/, programs/, etc.)
 ```
 
 **Only these two files are required at the root:**
@@ -43,9 +43,9 @@ templates/
 Everything else is flexible. Your template might be:
 
 - A Next.js frontend with `src/` and `app/` directories
-- An Anchor program with `anchor/programs/` structure
+- An TrezoaAnchor program with `trezoaanchor/programs/` structure
 - A Node.js script with minimal files
-- A fullstack app with both `anchor/` and `src/`
+- A fullstack app with both `trezoaanchor/` and `src/`
 - A pure Rust program with `Cargo.toml`
 - Any other valid Trezoa project structure
 
@@ -59,7 +59,7 @@ Your template's `package.json` must include these metadata fields:
   "displayName": "Human Readable Name",
   "description": "Clear, concise description of what this template does",
   "usecase": "Category",
-  "keywords": ["solana", "relevant", "keywords"]
+  "keywords": ["trezoa", "relevant", "keywords"]
 }
 ```
 
@@ -133,7 +133,7 @@ Add the required metadata fields to your template's `package.json`:
   "displayName": "Your Template Display Name",
   "description": "A clear description of what this template provides",
   "usecase": "Starter",
-  "keywords": ["solana", "nextjs", "typescript", "trezoaanchor"]
+  "keywords": ["trezoa", "nextjs", "typescript", "trezoaanchor"]
 }
 ```
 
@@ -151,7 +151,7 @@ The generation process:
 1. Scans all directories in `community/`, `gill/`, `web3js/`, and `mobile/`
 2. Reads each template's `package.json`
 3. Extracts required fields (name, displayName, description, usecase, keywords)
-4. Generates unique template IDs in the format: `gh:trezoa-foundation/templates/community/your-template-name`
+4. Generates unique template IDs in the format: `gh:trzledgerfoundation/templates/community/your-template-name`
 5. Creates `templates.json` and `TEMPLATES.md` with all template metadata
 
 ## OG Image Generation
@@ -179,7 +179,7 @@ pnpm create-image "<Text>" community/your-template-name
 Generate an image with the Trezoa logo and custom text:
 
 ```bash
-pnpm create-image "Anchor" community/your-template-name
+pnpm create-image "TrezoaAnchor" community/your-template-name
 ```
 
 This creates an image with:
@@ -260,7 +260,7 @@ If you encounter issues not covered in this guide:
 
 1. **Check existing templates**: Look at `community/` for examples
 2. **Read the main CONTRIBUTING.md**: General contribution guidelines
-3. **Open an issue**: https://github.com/trezoa-foundation/templates/issues
+3. **Open an issue**: https://github.com/trzledgerfoundation/templates/issues
 4. **Ask in PR**: Maintainers can provide guidance in your pull request
 
 ## Summary Checklist

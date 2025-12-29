@@ -1,5 +1,5 @@
-// Here we export some useful types and functions for interacting with the Anchor program.
-import { AnchorProvider, Program } from '@trezoa-xyz/anchor'
+// Here we export some useful types and functions for interacting with the TrezoaAnchor program.
+import { TrezoaAnchorProvider, Program } from '@trezoa-xyz/trezoaanchor'
 import { Cluster, PublicKey } from '@trezoa/web3.js'
 import CounterIDL from '../target/idl/counter.json'
 import type { Counter } from '../target/types/counter'
@@ -10,8 +10,8 @@ export { Counter, CounterIDL }
 // The programId is imported from the program IDL.
 export const COUNTER_PROGRAM_ID = new PublicKey(CounterIDL.address)
 
-// This is a helper function to get the Counter Anchor program.
-export function getCounterProgram(provider: AnchorProvider, address?: PublicKey): Program<Counter> {
+// This is a helper function to get the Counter TrezoaAnchor program.
+export function getCounterProgram(provider: TrezoaAnchorProvider, address?: PublicKey): Program<Counter> {
   return new Program({ ...CounterIDL, address: address ? address.toBase58() : CounterIDL.address } as Counter, provider)
 }
 

@@ -1,4 +1,4 @@
-// Here we export some useful types and functions for interacting with the Anchor program.
+// Here we export some useful types and functions for interacting with the TrezoaAnchor program.
 import { Account, getBase58Decoder, TrezoaClient } from 'gill'
 import { getProgramAccountsDecoded } from './helpers/get-program-accounts-decoded'
 import { Counter, COUNTER_DISCRIMINATOR, COUNTER_PROGRAM_ADDRESS, getCounterDecoder } from './client/js'

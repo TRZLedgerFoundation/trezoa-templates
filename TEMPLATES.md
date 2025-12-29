@@ -10,13 +10,13 @@ Kit Templates (using @trezoa/kit)
 
 `kit` `nextjs` `react` `trezoa-kit` `tailwind` `typescript`
 
-### [nextjs-anchor](kit/nextjs-anchor)
+### [nextjs-trezoaanchor](kit/nextjs-trezoaanchor)
 
-`gh:trezoa-foundation/templates/kit/nextjs-anchor`
+`gh:trezoa-foundation/templates/kit/nextjs-trezoaanchor`
 
-> Next.js, Tailwind, @trezoa/react-hooks, Anchor vault program
+> Next.js, Tailwind, @trezoa/react-hooks, TrezoaAnchor vault program
 
-`anchor` `kit` `nextjs` `react` `trezoa-kit` `tailwind` `typescript`
+`trezoaanchor` `kit` `nextjs` `react` `trezoa-kit` `tailwind` `typescript`
 
 ### [react-vite](kit/react-vite)
 
@@ -26,13 +26,13 @@ Kit Templates (using @trezoa/kit)
 
 `kit` `react` `trezoa-kit` `tailwind` `typescript` `vite`
 
-### [react-vite-anchor](kit/react-vite-anchor)
+### [react-vite-trezoaanchor](kit/react-vite-trezoaanchor)
 
-`gh:trezoa-foundation/templates/kit/react-vite-anchor`
+`gh:trezoa-foundation/templates/kit/react-vite-trezoaanchor`
 
-> React + Vite, Tailwind, @trezoa/react-hooks, Anchor vault program
+> React + Vite, Tailwind, @trezoa/react-hooks, TrezoaAnchor vault program
 
-`anchor` `kit` `react` `trezoa-kit` `tailwind` `typescript` `vite`
+`trezoaanchor` `kit` `react` `trezoa-kit` `tailwind` `typescript` `vite`
 
 # Gill
 
@@ -50,15 +50,15 @@ Gill Templates (based on @trezoa/kit)
 
 `gh:trezoa-foundation/templates/gill/gill-next-tailwind-basic`
 
-> Next.js, Tailwind, basic Anchor example, gill (based on @trezoa/kit), Wallet UI
+> Next.js, Tailwind, basic TrezoaAnchor example, gill (based on @trezoa/kit), Wallet UI
 
-`anchor-basic` `gill` `nextjs` `react` `trezoa-kit` `tailwind` `typescript` `wallet-ui`
+`trezoaanchor-basic` `gill` `nextjs` `react` `trezoa-kit` `tailwind` `typescript` `wallet-ui`
 
 ### [gill-next-tailwind-counter](gill/gill-next-tailwind-counter)
 
 `gh:trezoa-foundation/templates/gill/gill-next-tailwind-counter`
 
-> Next.js, Tailwind, Anchor Counter example, gill (based on @trezoa/kit), Wallet UI
+> Next.js, Tailwind, TrezoaAnchor Counter example, gill (based on @trezoa/kit), Wallet UI
 
 `trezoaanchor-counter` `gill` `nextjs` `react` `trezoa-kit` `tailwind` `typescript` `wallet-ui`
 
@@ -98,15 +98,15 @@ Gill Templates (based on @trezoa/kit)
 
 `gh:trezoa-foundation/templates/gill/gill-react-vite-tailwind-basic`
 
-> React+Vite, Tailwind, gill (based on @trezoa/kit), basic Anchor example, Wallet UI
+> React+Vite, Tailwind, gill (based on @trezoa/kit), basic TrezoaAnchor example, Wallet UI
 
-`anchor-basic` `gill` `react` `trezoa-kit` `tailwind` `typescript` `vite` `wallet-ui`
+`trezoaanchor-basic` `gill` `react` `trezoa-kit` `tailwind` `typescript` `vite` `wallet-ui`
 
 ### [gill-react-vite-tailwind-counter](gill/gill-react-vite-tailwind-counter)
 
 `gh:trezoa-foundation/templates/gill/gill-react-vite-tailwind-counter`
 
-> React+Vite, Tailwind, gill (based on @trezoa/kit), Anchor Counter example, Wallet UI
+> React+Vite, Tailwind, gill (based on @trezoa/kit), TrezoaAnchor Counter example, Wallet UI
 
 `trezoaanchor-counter` `gill` `react` `trezoa-kit` `tailwind` `typescript` `vite` `wallet-ui`
 
@@ -162,15 +162,15 @@ Templates using @trezoa/web3.js (legacy)
 
 `gh:trezoa-foundation/templates/web3js/web3js-next-tailwind-basic`
 
-> Next.js, Tailwind, @trezoa/web3.js, Wallet Adapter, basic Anchor program
+> Next.js, Tailwind, @trezoa/web3.js, Wallet Adapter, basic TrezoaAnchor program
 
-`anchor-basic` `nextjs` `react` `trezoa-web3js` `tailwind` `typescript` `wallet-adapter`
+`trezoaanchor-basic` `nextjs` `react` `trezoa-web3js` `tailwind` `typescript` `wallet-adapter`
 
 ### [web3js-next-tailwind-counter](web3js/web3js-next-tailwind-counter)
 
 `gh:trezoa-foundation/templates/web3js/web3js-next-tailwind-counter`
 
-> Next.js, Tailwind, @trezoa/web3.js, Wallet Adapter, Anchor Counter program
+> Next.js, Tailwind, @trezoa/web3.js, Wallet Adapter, TrezoaAnchor Counter program
 
 `trezoaanchor-counter` `nextjs` `react` `trezoa-web3js` `tailwind` `typescript` `wallet-adapter`
 
@@ -186,15 +186,15 @@ Templates using @trezoa/web3.js (legacy)
 
 `gh:trezoa-foundation/templates/web3js/web3js-react-vite-tailwind-basic`
 
-> React + Vite, Tailwind, @trezoa/web3.js, Wallet Adapter, basic Anchor program
+> React + Vite, Tailwind, @trezoa/web3.js, Wallet Adapter, basic TrezoaAnchor program
 
-`anchor-basic` `react` `trezoa-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
+`trezoaanchor-basic` `react` `trezoa-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
 
 ### [web3js-react-vite-tailwind-counter](web3js/web3js-react-vite-tailwind-counter)
 
 `gh:trezoa-foundation/templates/web3js/web3js-react-vite-tailwind-counter`
 
-> React + Vite, Tailwind, @trezoa/web3.js, Wallet Adapter, Anchor Counter program
+> React + Vite, Tailwind, @trezoa/web3.js, Wallet Adapter, TrezoaAnchor Counter program
 
 `trezoaanchor-counter` `web3js` `react` `trezoa-web3js` `tailwind` `typescript` `vite` `wallet-adapter`
 
@@ -208,7 +208,7 @@ Templates maintained by the Trezoa community
 
 > x402 protocol implementation for Trezoa with Facilitator and Server apps using TypeScript and Gill SDK
 
-`solana` `x402` `payment` `protocol` `blockchain` `typescript` `gill`
+`trezoa` `x402` `payment` `protocol` `blockchain` `typescript` `gill`
 
 ### [merkle-airdrop](community/merkle-airdrop)
 
@@ -224,7 +224,7 @@ Templates maintained by the Trezoa community
 
 > Complete x402 payment protocol demo with MoneyMQ facilitator, showing micropayment-protected APIs on Trezoa
 
-`x402` `moneymq` `payments` `micropayments` `solana` `api-monetization` `kora` `facilitator` `typescript`
+`x402` `moneymq` `payments` `micropayments` `trezoa` `api-monetization` `kora` `facilitator` `typescript`
 
 ### [trezoa-chatgpt-kit](community/trezoa-chatgpt-kit)
 
@@ -232,7 +232,7 @@ Templates maintained by the Trezoa community
 
 > ChatGPT app with Trezoa features - Swaps, transfers, staking and data query via natural language. Browser wallets + x402 payments or private key mode
 
-`solana` `chatgpt` `openai` `mcp` `jupiter` `x402` `payments` `swap` `wallet` `defi` `staking` `nextjs` `typescript` `spl-token` `sns`
+`trezoa` `chatgpt` `openai` `mcp` `jupiter` `x402` `payments` `swap` `wallet` `defi` `staking` `nextjs` `typescript` `tpl-token` `sns`
 
 ### [supabase-auth](community/supabase-auth)
 
@@ -240,7 +240,7 @@ Templates maintained by the Trezoa community
 
 > Authenticate Trezoa wallets with Supabase
 
-`supabase` `authentication` `solana` `framework-kit`
+`supabase` `authentication` `trezoa` `framework-kit`
 
 ### [x402-trezoa-rust](community/x402-trezoa-rust)
 
@@ -248,7 +248,7 @@ Templates maintained by the Trezoa community
 
 > x402 payment server template for Trezoa with Rust
 
-`solana` `x402` `rust` `payments` `api` `axum` `actix` `rocket`
+`trezoa` `x402` `rust` `payments` `api` `axum` `actix` `rocket`
 
 ### [x402-template](community/x402-template)
 
@@ -256,7 +256,7 @@ Templates maintained by the Trezoa community
 
 > Next.js Trezoa starter with X402 payment protocol integration
 
-`solana` `nextjs` `x402` `template` `starter`
+`trezoa` `nextjs` `x402` `template` `starter`
 
 ### [zk-compression-airdrop](community/zk-compression-airdrop)
 

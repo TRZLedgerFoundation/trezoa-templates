@@ -16,7 +16,7 @@ export function AppDropdown({
     <Menu
       visible={isOpen}
       onDismiss={() => setIsOpen(false)}
-      anchor={
+      trezoaanchor={
         <Button icon="server-network" mode="contained-tonal" onPress={() => setIsOpen(true)}>
           {selectedItem}
         </Button>
