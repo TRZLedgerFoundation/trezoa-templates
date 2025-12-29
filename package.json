@@ -1,5 +1,5 @@
 {
-  "name": "@trzledgerfoundation/templates",
+  "name": "@trezoa-foundation/templates",
   "version": "1.0.0",
   "description": "Trezoa Templates for create-trezoa-dapp",
   "main": "index.js",

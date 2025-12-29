@@ -134,7 +134,7 @@ export default function SwapPage() {
         const provider = await ensureWalletConnected()
         const signature = await signAndSendTransaction(provider, data.swapTransaction)
 
-        const explorerUrl = `https://solscan.io/tx/${signature}`
+        const explorerUrl = `https://trzscan.io/tx/${signature}`
         setSwapResult({
           outputAmount: data.expectedOutputAmount ?? 0,
           outputToken,
@@ -262,7 +262,7 @@ export default function SwapPage() {
                 rel="noopener noreferrer"
                 className="text-sm text-green-600 dark:text-green-400 hover:underline mt-1 inline-block break-all"
               >
-                View on Solscan →
+                View on Trzscan →
               </a>
             </div>
           )}

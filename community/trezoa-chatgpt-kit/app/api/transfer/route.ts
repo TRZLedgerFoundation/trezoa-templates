@@ -136,7 +136,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       signature,
-      explorerUrl: `https://solscan.io/tx/${signature}`,
+      explorerUrl: `https://trzscan.io/tx/${signature}`,
       from: fromPublicKey.toString(),
       to: destination.toString(),
       amount: solAmount,

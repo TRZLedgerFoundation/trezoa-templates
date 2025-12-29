@@ -157,7 +157,7 @@ Splits recipients across multiple transactions to stay within transaction size l
 - 1000 recipients = ~0.0004 TRZ
 - Requires ZK Compression indexer to query
 
-### Why Transactions Don't Appear on Solscan
+### Why Transactions Don't Appear on Trzscan
 
 Compressed token accounts are stored in on-chain Merkle trees, not as individual accounts. Standard explorers can't decode this data structure. To query compressed accounts:
 
@@ -228,7 +228,7 @@ Your Helius API key is incorrect. Get a new one from https://dev.helius.xyz/
 
 The connected wallet must match the mint authority. Connect the wallet whose private key is in `DEV_WALLET`.
 
-### "Transaction not found on Solscan"
+### "Transaction not found on Trzscan"
 
 This is expected! Compressed tokens use Merkle trees. Check the mint address on Trezoa Explorer instead.
 

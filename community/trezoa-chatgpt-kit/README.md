@@ -25,7 +25,7 @@ This is the **first-ever ChatGPT application** that combines:
 - Support for token symbols (TRZ, USDC) or mint addresses
 - Support for ticker symbols like `$SEND`
 - Low slippage and optimal routing via Jupiter
-- Transaction links to Solscan explorer
+- Transaction links to Trzscan explorer
 
 ### 💸 TRZ Transfers
 
@@ -291,7 +291,7 @@ Edit `lib/trezoa-config.ts`:
 
 ```typescript
 export const TOKENS = {
-  TRZ: 'So11111111111111111111111111111111111111112',
+  TRZ: 'Tr11111111111111111111111111111111111111112',
   USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
   USDT: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
   BONK: 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263',
@@ -373,7 +373,7 @@ Content-Type: application/json
 {
   "success": true,
   "signature": "5xY...",
-  "explorerUrl": "https://solscan.io/tx/5xY...",
+  "explorerUrl": "https://trzscan.io/tx/5xY...",
   "timestamp": "2025-10-24T..."
 }
 ```
@@ -408,7 +408,7 @@ GET /api/wallet/balance?account=arpit.sol
    - Don't use your main wallet
 
 3. **Monitor Transactions**
-   - Check [Solscan](https://solscan.io/) regularly
+   - Check [Trzscan](https://trzscan.io/) regularly
    - Review transaction history
    - Set up alerts for large amounts
 
@@ -446,7 +446,7 @@ GET /api/wallet/balance?account=arpit.sol
 
 - Wallet needs TRZ for transaction fees (~0.000005 TRZ)
 - Plus the amount you want to swap/send
-- Check balance on Solscan
+- Check balance on Trzscan
 
 ### "Transaction failed"
 

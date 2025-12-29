@@ -117,7 +117,7 @@ Open the Jupiter swap interface
    - Flip tokens with the swap arrow
    - Execute the swap with one click
 4. Transaction happens automatically using your private key
-5. Success message shows the Solscan transaction link
+5. Success message shows the Trzscan transaction link
 
 ## 🎨 Widget Features
 
@@ -125,7 +125,7 @@ Open the Jupiter swap interface
 - **Token Flip**: Click the arrow to swap input/output tokens
 - **Dark Mode**: Automatically matches ChatGPT's theme
 - **Error Handling**: Clear error messages for issues
-- **Transaction Links**: Direct links to Solscan explorer
+- **Transaction Links**: Direct links to Trzscan explorer
 - **Responsive**: Works on mobile, tablet, and desktop
 
 ## 🔧 Technical Details
@@ -142,7 +142,7 @@ To add more tokens, edit `lib/trezoa-config.ts`:
 
 ```typescript
 export const TOKENS = {
-  TRZ: 'So11111111111111111111111111111111111111112',
+  TRZ: 'Tr11111111111111111111111111111111111111112',
   USDC: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
   USDT: 'Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB',
   BONK: 'DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263', // Example
@@ -199,7 +199,7 @@ Response:
 {
   "success": true,
   "signature": "5xY...",
-  "explorerUrl": "https://solscan.io/tx/5xY...",
+  "explorerUrl": "https://trzscan.io/tx/5xY...",
   "inputAmount": 0.001,
   "inputToken": "TRZ",
   "outputAmount": 0.123456,
@@ -243,7 +243,7 @@ User → ChatGPT → MCP Tool → Widget UI
    - Only fund it with what you need
 
 3. **Monitor transactions**
-   - Check Solscan regularly
+   - Check Trzscan regularly
    - Set up monitoring alerts
    - Review transaction history
 
@@ -274,7 +274,7 @@ User → ChatGPT → MCP Tool → Widget UI
 
 - Make sure wallet has enough TRZ
 - Need TRZ for both swap amount and transaction fees
-- Check balance on Solscan
+- Check balance on Trzscan
 
 ### "Transaction failed"
 
@@ -286,7 +286,7 @@ User → ChatGPT → MCP Tool → Widget UI
 
 - [Jupiter Documentation](https://station.jup.ag/docs)
 - [Trezoa Web3.js Docs](https://trezoa-team.github.io/trezoa-web3.js/)
-- [Solscan Explorer](https://solscan.io/)
+- [Trzscan Explorer](https://trzscan.io/)
 - [Jupiter Swap API](https://station.jup.ag/docs/apis/swap-api)
 
 ## 🎯 Next Steps

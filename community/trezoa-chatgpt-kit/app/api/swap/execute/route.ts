@@ -131,7 +131,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       signature: txid,
-      explorerUrl: `https://solscan.io/tx/${txid}`,
+      explorerUrl: `https://trzscan.io/tx/${txid}`,
       inputAmount: parseFloat(amount),
       inputToken: inputResolved.symbol,
       outputAmount,

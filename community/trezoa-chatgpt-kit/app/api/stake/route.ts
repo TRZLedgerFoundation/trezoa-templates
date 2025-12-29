@@ -31,7 +31,7 @@ async function resolveLstMintAndDecimals(param?: string): Promise<{ mint: string
   }
 
   const desired = desiredRaw.replace(/^\$/i, '')
-  if (desired.toLowerCase() === 'jupsol') {
+  if (desired.toLowerCase() === 'juptrz') {
     return { mint: JUPTRZ_MINT, decimals: LST_DECIMALS.JUPTRZ || 9, symbol: 'JupTRZ' }
   }
 
@@ -134,7 +134,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       signature,
-      explorerUrl: `https://solscan.io/tx/${signature}`,
+      explorerUrl: `https://trzscan.io/tx/${signature}`,
       inputAmount: parseFloat(amount),
       inputToken: 'TRZ',
       outputAmount,

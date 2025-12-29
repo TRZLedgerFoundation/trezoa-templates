@@ -75,7 +75,7 @@ export default function TransferPage() {
         // If external wallet mode, sign and send the transaction
         if (data.transferTransaction) {
           const signature = await signAndSendTransaction(provider, data.transferTransaction)
-          const explorerUrl = `https://solscan.io/tx/${signature}`
+          const explorerUrl = `https://trzscan.io/tx/${signature}`
           setResult({ signature, explorerUrl })
         } else {
           setResult({ signature: data.signature, explorerUrl: data.explorerUrl })
@@ -163,7 +163,7 @@ export default function TransferPage() {
           >
             <div style={{ marginBottom: 6 }}>Transfer sent successfully.</div>
             <a href={result.explorerUrl} target="_blank" rel="noreferrer" style={{ color: '#16a34a' }}>
-              View on Solscan
+              View on Trzscan
             </a>
           </div>
         ) : null}

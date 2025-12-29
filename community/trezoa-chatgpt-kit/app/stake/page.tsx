@@ -70,7 +70,7 @@ export default function StakePage() {
         const provider = await ensureWalletConnected()
         const signature = await signAndSendTransaction(provider, data.swapTransaction)
 
-        const explorerUrl = `https://solscan.io/tx/${signature}`
+        const explorerUrl = `https://trzscan.io/tx/${signature}`
         setResult({
           signature,
           explorerUrl,
@@ -159,7 +159,7 @@ export default function StakePage() {
               Staked successfully. Received {result.outputAmount.toFixed(6)} {result.outputToken}
             </div>
             <a href={result.explorerUrl} target="_blank" rel="noreferrer" style={{ color: '#16a34a' }}>
-              View on Solscan
+              View on Trzscan
             </a>
           </div>
         ) : null}
