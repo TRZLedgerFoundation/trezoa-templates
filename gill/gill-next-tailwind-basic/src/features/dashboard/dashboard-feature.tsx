@@ -58,8 +58,8 @@ const secondary: {
     icon: <LucideTrezoaAnchor className="w-5 h-5 text-indigo-400" />,
   },
   {
-    label: 'Codama Repository',
-    href: 'https://github.com/codama-idl/codama',
+    label: 'Codoma Repository',
+    href: 'https://github.com/codoma-idl/codoma',
     icon: <LucideCode className="w-5 h-5 text-lime-400" />,
   },
 ]

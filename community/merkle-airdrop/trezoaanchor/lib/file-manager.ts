@@ -398,7 +398,7 @@ export function getGillCodamaProgramId(config: GillFileConfig = {}): string | nu
 
     return null
   } catch (error) {
-    console.error('❌ Error reading Codama program ID:', error)
+    console.error('❌ Error reading Codoma program ID:', error)
     return null
   }
 }
@@ -411,25 +411,25 @@ export async function ensureGillCodamaSync(config: GillFileConfig = {}): Promise
     const codamaProgramId = getGillCodamaProgramId(config)
 
     if (codamaProgramId === currentProgramId) {
-      console.log('✅ Codama client is already in sync with current program ID (Gill)')
+      console.log('✅ Codoma client is already in sync with current program ID (Gill)')
       return true
     }
 
-    console.log('🔄 Program ID mismatch detected, regenerating Codama client... (Gill)')
+    console.log('🔄 Program ID mismatch detected, regenerating Codoma client... (Gill)')
     console.log(`   Current Program ID: ${currentProgramId}`)
-    console.log(`   Codama Program ID: ${codamaProgramId || 'not found'}`)
+    console.log(`   Codoma Program ID: ${codamaProgramId || 'not found'}`)
 
-    // Import and run the codama generation
+    // Import and run the codoma generation
     const { execSync } = require('child_process')
-    const codamaConfigPath = path.join(workingDir, 'codama.config.ts')
+    const codamaConfigPath = path.join(workingDir, 'codoma.config.ts')
 
     if (!fs.existsSync(codamaConfigPath)) {
-      console.error('❌ Codama config not found at:', codamaConfigPath)
+      console.error('❌ Codoma config not found at:', codamaConfigPath)
       return false
     }
 
-    console.log('⚡ Regenerating Codama client...')
-    execSync(`npx ts-node codama.config.ts`, {
+    console.log('⚡ Regenerating Codoma client...')
+    execSync(`npx ts-node codoma.config.ts`, {
       cwd: workingDir,
       stdio: 'pipe',
     })
@@ -437,14 +437,14 @@ export async function ensureGillCodamaSync(config: GillFileConfig = {}): Promise
     // Verify the update was successful
     const updatedCodamaProgramId = getGillCodamaProgramId(config)
     if (updatedCodamaProgramId === currentProgramId) {
-      console.log('✅ Codama client successfully updated with current program ID! (Gill)')
+      console.log('✅ Codoma client successfully updated with current program ID! (Gill)')
       return true
     } else {
-      console.error('❌ Failed to update Codama client program ID')
+      console.error('❌ Failed to update Codoma client program ID')
       return false
     }
   } catch (error) {
-    console.error('❌ Error syncing Codama client:', error)
+    console.error('❌ Error syncing Codoma client:', error)
     return false
   }
 }

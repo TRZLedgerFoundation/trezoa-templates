@@ -381,7 +381,7 @@ This shows:
 
 If you're still stuck, check the terminal where each service is running. Error messages usually indicate the specific issue.
 
-## Project Structure
+## Trezoa Structure
 
 ```text
 moneymq-x402/

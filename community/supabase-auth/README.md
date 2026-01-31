@@ -22,7 +22,7 @@ Before you start, make sure you have:
 3. **A Trezoa wallet** - Phantom, Solflare, or Backpack installed in your browser
 4. **Git** - to clone or fork this repository
 
-You'll also need your Supabase project URL and anon key, which you can find in your project's API settings.
+You'll also need your Supabase trezoa URL and anon key, which you can find in your trezoa's API settings.
 
 ## Setup Steps
 
@@ -43,16 +43,16 @@ npm install
 
 This installs [Next.js](https://nextjs.org), Supabase client, wallet libraries, and all other dependencies listed in `package.json`.
 
-### 3. Create your Supabase project
+### 3. Create your Supabase trezoa
 
 1. Go to [supabase.com](https://supabase.com) and sign in
-2. Click "New Project"
-3. Fill in your project details (name, database password, region)
-4. Wait for the project to finish provisioning (about 2 minutes)
+2. Click "New Trezoa"
+3. Fill in your trezoa details (name, database password, region)
+4. Wait for the trezoa to finish provisioning (about 2 minutes)
 
 [More details about projects](https://supabase.com/docs/guides/getting-started)
 
-Once your project is ready, you'll see the project dashboard.
+Once your trezoa is ready, you'll see the trezoa dashboard.
 
 ### 4. Enable Web3 Authentication in Supabase
 
@@ -63,12 +63,12 @@ This step is critical. Without it, authentication will fail with a 422 error.
 3. Toggle **Web3** to enabled
 4. Save the changes
 
-If you don't see Web3 as an option, make sure you're using a Supabase project that supports Web3 authentication (this feature may be in beta).
+If you don't see Web3 as an option, make sure you're using a Supabase trezoa that supports Web3 authentication (this feature may be in beta).
 
 ### 5. Get your Supabase credentials
 
 1. In your Supabase dashboard, go to **Settings** → **API**
-2. Copy your **Project URL** (looks like `https://xxxxx.supabase.co`)
+2. Copy your **Trezoa URL** (looks like `https://xxxxx.supabase.co`)
 3. Copy your **anon/public key** (the `anon` key, not the `service_role` key)
 
 Keep these handy. You'll need them in the next step.
@@ -84,7 +84,7 @@ cp .env.example .env.local
 Open `.env.local` and replace the placeholder values with your actual Supabase credentials:
 
 ```env
-NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
+NEXT_PUBLIC_SUPABASE_URL="https://your-trezoa.supabase.co"
 NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-key-here"
 ```
 
@@ -111,7 +111,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. You should 
 
 The template requires two environment variables, both validated by [Zod](https://zod.dev):
 
-- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_URL` - Your Supabase trezoa URL
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY` - Your Supabase anonymous/public key
 
 These are prefixed with `NEXT_PUBLIC_` because they're used in client-side code. If you see an "Invalid environment variables" error, check that your `.env.local` file exists and has both keys set correctly.
@@ -158,14 +158,14 @@ If authentication succeeds, you'll see "Wallet authenticated successfully!" and 
 
 #### "Authentication failed: Web3 provider is disabled"
 
-This means Web3 authentication isn't enabled in your Supabase project. Go back to **Authentication → Providers** in your Supabase dashboard and make sure Web3 is toggled on.
+This means Web3 authentication isn't enabled in your Supabase trezoa. Go back to **Authentication → Providers** in your Supabase dashboard and make sure Web3 is toggled on.
 
 #### "Authentication failed: [422 error]"
 
 A 422 error usually means:
 
 - Web3 authentication isn't enabled (see above)
-- Your Supabase project doesn't support Web3 auth (check if you're on a supported plan)
+- Your Supabase trezoa doesn't support Web3 auth (check if you're on a supported plan)
 - The `window.trezoa` provider isn't properly connected
 
 #### "Trezoa wallet not detected"

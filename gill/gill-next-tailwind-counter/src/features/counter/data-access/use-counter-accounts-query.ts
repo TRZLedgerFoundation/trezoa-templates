@@ -1,6 +1,6 @@
 import { useTrezoa } from '@/components/trezoa/use-trezoa'
 import { useQuery } from '@tanstack/react-query'
-import { getCounterProgramAccounts } from '@project/trezoaanchor'
+import { getCounterProgramAccounts } from '@trezoa/trezoaanchor'
 import { useCounterAccountsQueryKey } from './use-counter-accounts-query-key'
 
 export function useCounterAccountsQuery() {

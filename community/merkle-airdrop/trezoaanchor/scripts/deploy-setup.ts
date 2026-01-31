@@ -86,7 +86,7 @@ export async function runGillDeploymentSetup(config: GillDeploymentSetupConfig =
   })
 
   try {
-    console.log('🎉 Welcome to Trezoa Distributor Deployment Setup (Gill + Codama Edition)!\n')
+    console.log('🎉 Welcome to Trezoa Distributor Deployment Setup (Gill + Codoma Edition)!\n')
     console.log('This script will help you:')
     console.log('1. Set up your deployment wallet')
     console.log('2. Create test wallets for examples')
@@ -154,7 +154,7 @@ export async function runGillDeploymentSetup(config: GillDeploymentSetupConfig =
 
 function showGillFinalSummary(result: any, deploymentAttempted: boolean): void {
   console.log('\n' + '='.repeat(50))
-  console.log('✅ Setup completed successfully with Gill + Codama!\n')
+  console.log('✅ Setup completed successfully with Gill + Codoma!\n')
 
   console.log('📁 Files created/updated:')
   console.log('   - trezoaanchor/deploy-wallet.json')

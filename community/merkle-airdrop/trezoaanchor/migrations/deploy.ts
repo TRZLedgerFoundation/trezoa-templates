@@ -1,5 +1,5 @@
 // Modern Gill-based deployment migration
-// This replaces the legacy TrezoaAnchor provider approach with Gill + Codama
+// This replaces the legacy TrezoaAnchor provider approach with Gill + Codoma
 
 import { runGillDeploymentSetup } from '../scripts/deploy-setup'
 

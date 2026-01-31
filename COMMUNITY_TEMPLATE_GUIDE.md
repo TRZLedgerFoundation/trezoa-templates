@@ -4,7 +4,7 @@ This guide provides comprehensive instructions for contributing community templa
 
 ## Overview
 
-Community templates are Trezoa project templates maintained by the community that demonstrate specific use cases, frameworks, or patterns. They are:
+Community templates are Trezoa trezoa templates maintained by the community that demonstrate specific use cases, frameworks, or patterns. They are:
 
 - Discoverable through the `create-trezoa-dapp` CLI
 - Showcased on the official [Trezoa Templates marketplace](https://templates.trezoa.com/)
@@ -24,7 +24,7 @@ All community templates must meet these requirements:
 
 ### Directory Structure
 
-Place your template in the `community/` directory. Your template can have any structure that makes sense for your project:
+Place your template in the `community/` directory. Your template can have any structure that makes sense for your trezoa:
 
 ```
 templates/
@@ -47,7 +47,7 @@ Everything else is flexible. Your template might be:
 - A Node.js script with minimal files
 - A fullstack app with both `trezoaanchor/` and `src/`
 - A pure Rust program with `Cargo.toml`
-- Any other valid Trezoa project structure
+- Any other valid Trezoa trezoa structure
 
 ### Required package.json Fields
 
@@ -63,7 +63,7 @@ Your template's `package.json` must include these metadata fields:
 }
 ```
 
-You can include any additional fields (scripts, dependencies, etc.) that make sense for your project.
+You can include any additional fields (scripts, dependencies, etc.) that make sense for your trezoa.
 
 #### Field Descriptions
 
@@ -89,13 +89,13 @@ You can optionally include setup instructions and variable substitution:
     "instructions": [
       "First, install dependencies:",
       "+{pm} install",
-      "Then build the project:",
+      "Then build the trezoa:",
       "+{pm} build",
       "Start the development server:",
       "+{pm} dev"
     ],
     "rename": {
-      "project-name": {
+      "trezoa-name": {
         "to": "{{name}}",
         "paths": ["src", "README.md"]
       }
@@ -104,17 +104,17 @@ You can optionally include setup instructions and variable substitution:
 }
 ```
 
-- **instructions**: Array of setup steps shown after project creation
-- **rename**: Define text replacements (e.g., replace placeholder names with user's project name)
+- **instructions**: Array of setup steps shown after trezoa creation
+- **rename**: Define text replacements (e.g., replace placeholder names with user's trezoa name)
 
 ## Creating Your Template
 
-### Step 1: Prepare Your Project
+### Step 1: Prepare Your Trezoa
 
-1. Create a clean, working Trezoa project
+1. Create a clean, working Trezoa trezoa
 2. Remove any personal configuration, API keys, or credentials
 3. Add comprehensive comments and documentation
-4. Test that the project works from a fresh install
+4. Test that the trezoa works from a fresh install
 
 ### Step 2: Create Template Directory
 

@@ -1,4 +1,4 @@
-import { CounterAccount } from '@project/trezoaanchor'
+import { CounterAccount } from '@trezoa/trezoaanchor'
 import { UiWalletAccount } from '@wallet-ui/react'
 import { Button } from '@/components/ui/button'
 

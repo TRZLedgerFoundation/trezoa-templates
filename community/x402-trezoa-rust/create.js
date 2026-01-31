@@ -101,7 +101,7 @@ const setupProject = (answer) => {
   )
 
   try {
-    // Create project directory
+    // Create trezoa directory
     fs.mkdirSync(targetDir, { recursive: true })
 
     const templateDir = __dirname

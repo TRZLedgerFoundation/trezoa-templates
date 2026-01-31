@@ -1,10 +1,10 @@
-## Trezoa Merkle Airdrop Distributor (Codama + TrezoaAnchor)
+## Trezoa Merkle Airdrop Distributor (Codoma + TrezoaAnchor)
 
-A modern, script-driven Trezoa airdrop template that distributes TRZ to many recipients efficiently using a Merkle tree. Only the 32‑byte Merkle root is stored on-chain. The project uses TrezoaAnchor for the on-chain program, Codama for a generated TypeScript client, and the @trezoa/kit for transactions. This README focuses on how the program works and how to use it through the provided scripts.
+A modern, script-driven Trezoa airdrop template that distributes TRZ to many recipients efficiently using a Merkle tree. Only the 32‑byte Merkle root is stored on-chain. The trezoa uses TrezoaAnchor for the on-chain program, Codoma for a generated TypeScript client, and the @trezoa/kit for transactions. This README focuses on how the program works and how to use it through the provided scripts.
 
 ### Table of Contents
 
-- [Trezoa Merkle Airdrop Distributor (Codama + TrezoaAnchor)](#trezoa-merkle-airdrop-distributor-codama-trezoaanchor)
+- [Trezoa Merkle Airdrop Distributor (Codoma + TrezoaAnchor)](#trezoa-merkle-airdrop-distributor-codoma-trezoaanchor)
   - [Table of Contents](#table-of-contents)
 - [Prerequisites](#prerequisites)
   - [Quick Installation (Recommended)](#quick-installation-recommended)
@@ -210,14 +210,14 @@ pnpm create trezoa-dapp@latest -t gh:trz-ledger-foundation/templates/community/m
 ```
 
 ```bash
-cd <your-project>
+cd <your-trezoa>
 pnpm install
 ```
 
 Generates the necessary TypeScript types and client code from the Trezoa program:
 
 ```bash
-pnpm codama:generate
+pnpm codoma:generate
 ```
 
 Then set up the program:
@@ -361,7 +361,7 @@ Safeguards:
 
 ### Program Interactions
 
-Below are concise TypeScript examples using the generated Codama client. These snippets assume the scripts have already generated and wired the client paths. Use @trezoa/kit to create and send transactions.
+Below are concise TypeScript examples using the generated Codoma client. These snippets assume the scripts have already generated and wired the client paths. Use @trezoa/kit to create and send transactions.
 
 Initialize airdrop:
 
@@ -506,7 +506,7 @@ The template and generated client target these versions for consistent behavior 
 
 - **[@trezoa/kit](https://github.com/trezoa-xyz/kit)**: Modern Trezoa JavaScript SDK
 - **[@trezoa/react-hooks](https://www.npmjs.com/package/@trezoa/react-hooks)**: React hooks for Trezoa
-- **[Codama](https://github.com/codama-idl/codama)**: Automatic client generation
+- **[Codoma](https://github.com/codoma-idl/codoma)**: Automatic client generation
 - **[TrezoaAnchor Framework](https://www.trezoaanchor-lang.com/)**: Trezoa program development
 - **[Vitest](https://vitest.dev/)**: Fast unit testing framework
 

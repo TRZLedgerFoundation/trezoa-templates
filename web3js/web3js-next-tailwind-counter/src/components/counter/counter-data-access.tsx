@@ -1,6 +1,6 @@
 'use client'
 
-import { getCounterProgram, getCounterProgramId } from '@project/trezoaanchor'
+import { getCounterProgram, getCounterProgramId } from '@trezoa/trezoaanchor'
 import { useConnection } from '@trezoa/wallet-adapter-react'
 import { Cluster, Keypair, PublicKey } from '@trezoa/web3.js'
 import { useMutation, useQuery } from '@tanstack/react-query'

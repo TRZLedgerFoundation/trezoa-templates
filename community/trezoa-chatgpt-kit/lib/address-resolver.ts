@@ -28,7 +28,7 @@ export async function resolveAddressOrDomain(input: string, connection: Connecti
     }
   } catch {}
 
-  // 3) Fallback to Bonfida SNS (.sol + TRZ record)
+  // 3) Fallback to Bonfida SNS (.trz + TRZ record)
   try {
     const sns: any = await import('@bonfida/tpl-name-service')
 
@@ -48,9 +48,9 @@ export async function resolveAddressOrDomain(input: string, connection: Connecti
       pubkey = res?.pubkey
     }
 
-    // Classic .sol fallback
-    if (!pubkey && normalized.endsWith('.sol') && typeof sns.getDomainKey === 'function') {
-      const nameOnly = normalized.replace(/\.sol$/i, '')
+    // Classic .trz fallback
+    if (!pubkey && normalized.endsWith('.trz') && typeof sns.getDomainKey === 'function') {
+      const nameOnly = normalized.replace(/\.trz$/i, '')
       const res = await sns.getDomainKey(nameOnly)
       pubkey = res?.pubkey
     }

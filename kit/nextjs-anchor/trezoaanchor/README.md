@@ -53,7 +53,7 @@ trezoaanchor deploy --provider.cluster devnet
 
 ```bash
 cd ..
-npm run codama:js
+npm run codoma:js
 ```
 
 This updates the generated client code in `app/generated/vault/` with your new program ID.

@@ -12,7 +12,7 @@ This template demonstrates a streamlined implementation of the X402 payment prot
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [How It Works](#how-it-works)
-- [Project Structure](#project-structure)
+- [Trezoa Structure](#trezoa-structure)
 - [Configuration](#configuration)
 - [Usage](#usage)
 
@@ -67,7 +67,7 @@ This template demonstrates a streamlined implementation of the X402 payment prot
 # Clone or create from template
 npx create-trezoa-dapp my-app --template x402-template
 
-# Navigate to project
+# Navigate to trezoa
 cd my-app
 
 # Install dependencies
@@ -161,7 +161,7 @@ export const config = {
 
 ---
 
-## Project Structure
+## Trezoa Structure
 
 ```
 x402-template/

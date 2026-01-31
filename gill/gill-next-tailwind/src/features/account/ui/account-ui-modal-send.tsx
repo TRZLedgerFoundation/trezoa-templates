@@ -4,7 +4,7 @@ import { UiWalletAccount } from '@wallet-ui/react'
 import { AppModal } from '@/components/app-modal'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
-import { useTransferSolMutation } from '../data-access/use-transfer-sol-mutation'
+import { useTransferSolMutation } from '../data-access/use-transfer-trz-mutation'
 
 export function AccountUiModalSend(props: { account: UiWalletAccount; address: Address }) {
   const mutation = useTransferSolMutation({ account: props.account, address: props.address })

@@ -28,13 +28,13 @@
     "trezoaanchor-test": "cd trezoaanchor && trezoaanchor test --skip-deploy",
     "build": "tsc -b && vite build",
     "ci": "npm run build && npm run lint && npm run format:check",
-    "codama:js": "codama run js",
+    "codoma:js": "codoma run js",
     "dev": "vite",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "preview": "vite preview",
-    "setup": "npm run trezoaanchor-build && npm run codama:js"
+    "setup": "npm run trezoaanchor-build && npm run codoma:js"
   },
   "dependencies": {
     "@trezoa/client": "^1.2.0",
@@ -46,14 +46,14 @@
     "tailwindcss": "^4"
   },
   "devDependencies": {
-    "@codama/nodes-from-trezoaanchor": "^1.3.8",
-    "@codama/renderers-js": "^1.5.5",
+    "@codoma/nodes-from-trezoaanchor": "^1.3.8",
+    "@codoma/renderers-js": "^1.5.5",
     "@eslint/js": "^9.35.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5.0.3",
-    "codama": "^1.5.0",
+    "codoma": "^1.5.0",
     "eslint": "^9",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",

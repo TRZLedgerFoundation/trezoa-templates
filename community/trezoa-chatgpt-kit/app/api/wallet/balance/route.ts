@@ -16,12 +16,12 @@ export async function GET(request: Request) {
     const pubkey = await resolveAddressOrDomain(account, connection)
 
     const lamports = await connection.getBalance(pubkey, { commitment: 'confirmed' })
-    const sol = lamports / LAMPORTS_PER_TRZ
+    const trz = lamports / LAMPORTS_PER_TRZ
 
     return NextResponse.json({
       account: account,
       resolvedAddress: pubkey.toBase58(),
-      sol,
+      trz,
       lamports,
       timestamp: new Date().toISOString(),
     })

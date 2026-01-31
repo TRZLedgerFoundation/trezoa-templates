@@ -12,7 +12,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Generated Codama files:
+    // Generated Codoma files:
     "app/generated/**",
   ]),
 ]);

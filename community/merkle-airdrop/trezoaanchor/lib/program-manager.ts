@@ -235,11 +235,11 @@ export async function completeGillSetup(options: GillSetupOptions): Promise<{
 
       updateGillEnvironmentFile(programId, testWallets, { workingDir: config.workingDir })
 
-      // Ensure Codama client is updated with new program ID
-      console.log('🔄 Syncing Codama client with deployed program ID... (Gill)')
+      // Ensure Codoma client is updated with new program ID
+      console.log('🔄 Syncing Codoma client with deployed program ID... (Gill)')
       const codamaSynced = await ensureGillCodamaSync({ workingDir: config.workingDir })
       if (!codamaSynced) {
-        console.log('⚠️  Warning: Could not sync Codama client after deployment (Gill)')
+        console.log('⚠️  Warning: Could not sync Codoma client after deployment (Gill)')
       }
     }
 

@@ -20,7 +20,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@project/trezoaanchor": ["trezoaanchor/src"],
+      "@trezoa/trezoaanchor": ["trezoaanchor/src"],
       "@/*": ["./src/*"]
     }
   },

@@ -352,7 +352,7 @@ npm run fmt:check
 
 **Solution:**
 
-- Ensure `.env` file exists in project root
+- Ensure `.env` file exists in trezoa root
 - Verify `FACILITATOR_PRIVATE_KEY` is set and on a single line
 - Restart applications after updating `.env`
 

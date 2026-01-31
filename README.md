@@ -6,7 +6,7 @@ Browse all templates at https://templates.trezoa.com
 
 ## Usage
 
-Create a new Trezoa project using the interactive CLI:
+Create a new Trezoa trezoa using the interactive CLI:
 
 ```sh
 # npm

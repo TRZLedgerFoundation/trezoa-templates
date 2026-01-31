@@ -1,4 +1,4 @@
-import { CounterAccount } from '@project/trezoaanchor'
+import { CounterAccount } from '@trezoa/trezoaanchor'
 import { ellipsify, UiWalletAccount } from '@wallet-ui/react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { AppExplorerLink } from '@/components/app-explorer-link'

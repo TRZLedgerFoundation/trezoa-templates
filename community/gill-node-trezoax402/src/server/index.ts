@@ -91,7 +91,7 @@ const premiumRouteMw = createX402MiddlewareWithUtils(
 app.get('/api/premium-data', premiumRouteMw.middleware, (req, res) => {
   res.set({
     'x-payment-processed': 'true',
-    'x-payment-method': 'trezoa-sol',
+    'x-payment-method': 'trezoa-trz',
     'x-payment-network': 'devnet',
     'x-payment-transaction': req.payment?.transactionSignature,
   });

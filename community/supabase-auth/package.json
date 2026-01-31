@@ -21,7 +21,7 @@
   "create-trezoa-dapp": {
     "instructions": [
       "Set up Supabase:",
-      "1. Create a project at https://supabase.com",
+      "1. Create a trezoa at https://supabase.com",
       "2. Copy .env.example to .env.local and add your Supabase credentials",
       "3. Run: +{pm} prisma generate",
       "4. Run: +{pm} prisma migrate dev",

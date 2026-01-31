@@ -44,7 +44,7 @@ pub fn validate_payment_transaction(
     }
 
     // Locate TPL Token Program instruction
-    let spl_token_program = spl_token::id();
+    let spl_token_program = tpl_token::id();
 
     let token_ix = transaction.message.instructions()
         .iter()

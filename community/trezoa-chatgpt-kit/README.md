@@ -30,7 +30,7 @@ This is the **first-ever ChatGPT application** that combines:
 ### 💸 TRZ Transfers
 
 - Send TRZ to any wallet address
-- **SNS Domain Support** (.sol domains via Bonfida)
+- **SNS Domain Support** (.trz domains via Bonfida)
 - **AllDomains Support** (.superteam, .trezoa, and other TLDs)
 - **x402 Payment Protocol** (External Wallet Mode): Optional $0.001 USDC API fee from user's wallet
 - Explicit confirmation before sending
@@ -151,7 +151,7 @@ Once connected to ChatGPT, you can use natural language commands:
 ### Send TRZ
 
 ```
-"Send 0.001 TRZ to arpit.sol"
+"Send 0.001 TRZ to arpit.trz"
 "Transfer 0.5 TRZ to user.superteam"
 "Send 1 TRZ to 26k2...QjC"  (wallet address)
 ```
@@ -159,7 +159,7 @@ Once connected to ChatGPT, you can use natural language commands:
 ### Check Balances
 
 ```
-"What's the balance of arpit.sol?"
+"What's the balance of arpit.trz?"
 "Check balance for user.superteam"
 "How much TRZ does 26k2...QjC have?"
 ```
@@ -229,7 +229,7 @@ Beautiful, interactive interfaces rendered in ChatGPT:
 Smart address resolution supporting:
 
 - Raw wallet addresses (base58)
-- SNS domains (.sol via Bonfida)
+- SNS domains (.trz via Bonfida)
 - AllDomains TLDs (.superteam, .trezoa, etc.)
 
 ### Technology Stack
@@ -381,14 +381,14 @@ Content-Type: application/json
 ### Check Balance
 
 ```bash
-GET /api/wallet/balance?account=arpit.sol
+GET /api/wallet/balance?account=arpit.trz
 ```
 
 **Response:**
 
 ```json
 {
-  "sol": 1.5,
+  "trz": 1.5,
   "lamports": 1500000000,
   "resolvedAddress": "26k2...QjC",
   "timestamp": "2025-10-24T..."
@@ -426,7 +426,7 @@ GET /api/wallet/balance?account=arpit.sol
 
 ### "TREZOA_PRIVATE_KEY not found"
 
-- Ensure `.env.local` exists in project root
+- Ensure `.env.local` exists in trezoa root
 - Check variable name spelling
 - Restart dev server after adding env vars
 
@@ -490,7 +490,7 @@ Special thanks to:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This trezoa is licensed under the MIT License - see the LICENSE file for details.
 
 ## ⚠️ Disclaimer
 

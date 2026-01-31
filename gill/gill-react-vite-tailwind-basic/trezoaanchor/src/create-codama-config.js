@@ -6,7 +6,7 @@ export function createCodamaConfig({ idl, clientJs, dependencyMap = GILL_EXTERNA
     scripts: {
       js: {
         args: [clientJs, { dependencyMap }],
-        from: '@codama/renderers-js',
+        from: '@codoma/renderers-js',
       },
     },
   }

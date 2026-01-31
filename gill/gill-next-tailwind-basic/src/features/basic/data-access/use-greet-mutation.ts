@@ -1,4 +1,4 @@
-import { BASIC_PROGRAM_ADDRESS, getGreetInstruction } from '@project/trezoaanchor'
+import { BASIC_PROGRAM_ADDRESS, getGreetInstruction } from '@trezoa/trezoaanchor'
 import { useMutation } from '@tanstack/react-query'
 import { toast } from 'sonner'
 import { toastTx } from '@/components/toast-tx'

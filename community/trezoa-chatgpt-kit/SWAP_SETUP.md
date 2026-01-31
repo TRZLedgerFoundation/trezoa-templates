@@ -6,7 +6,7 @@ This guide explains how to set up and use the Jupiter swap integration in your C
 
 ### 1. Install Dependencies
 
-Already installed! The project includes:
+Already installed! The trezoa includes:
 
 - `@trezoa/web3.js` - Trezoa blockchain interactions
 - `@trezoa/tpl-token` - Token operations
@@ -14,7 +14,7 @@ Already installed! The project includes:
 
 ### 2. Configure Environment Variables
 
-Create a `.env.local` file in the project root:
+Create a `.env.local` file in the trezoa root:
 
 ```bash
 # Required: Your Trezoa wallet private key (base58 encoded)

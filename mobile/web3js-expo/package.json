@@ -40,7 +40,7 @@
     "ios": "expo run:ios",
     "lint": "expo lint --fix",
     "lint:check": "expo lint",
-    "reset-project": "node ./scripts/reset-project.js",
+    "reset-trezoa": "node ./scripts/reset-trezoa.js",
     "start": "expo start",
     "web": "expo start --web"
   },

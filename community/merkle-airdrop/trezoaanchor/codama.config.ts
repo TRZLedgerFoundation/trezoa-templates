@@ -1,17 +1,17 @@
-import { createFromRoot } from 'codama'
-import { rootNodeFromTrezoaAnchor, TrezoaAnchorIdl } from '@codama/nodes-from-trezoaanchor'
-import { renderJavaScriptVisitor } from '@codama/renderers'
-import { visit } from '@codama/visitors-core'
+import { createFromRoot } from 'codoma'
+import { rootNodeFromTrezoaAnchor, TrezoaAnchorIdl } from '@codoma/nodes-from-trezoaanchor'
+import { renderJavaScriptVisitor } from '@codoma/renderers'
+import { visit } from '@codoma/visitors-core'
 import trezoaanchorIdl from './target/idl/trezoa_distributor.json'
 import path from 'path'
 import { execSync } from 'child_process'
 import * as fs from 'fs'
 
 /**
- * Codama Configuration for Trezoa Distributor Program
+ * Codoma Configuration for Trezoa Distributor Program
  *
  * This configuration generates TypeScript clients from the TrezoaAnchor IDL
- * using Codama's code generation capabilities. The generated clients
+ * using Codoma's code generation capabilities. The generated clients
  * will be compatible with Gill (Trezoa Kit) instead of @trezoa/web3.js v1.
  */
 
@@ -71,7 +71,7 @@ function isValidProgramId(programId: string): boolean {
 }
 
 async function generateClients() {
-  console.log('🚀 Starting enhanced Codama client generation...')
+  console.log('🚀 Starting enhanced Codoma client generation...')
 
   try {
     // Check if program ID is valid before building
@@ -93,9 +93,9 @@ async function generateClients() {
       }
     }
 
-    // Convert TrezoaAnchor IDL to Codama tree
-    console.log('📝 Converting TrezoaAnchor IDL to Codama tree...')
-    const codama = createFromRoot(rootNodeFromTrezoaAnchor(trezoaanchorIdl as TrezoaAnchorIdl))
+    // Convert TrezoaAnchor IDL to Codoma tree
+    console.log('📝 Converting TrezoaAnchor IDL to Codoma tree...')
+    const codoma = createFromRoot(rootNodeFromTrezoaAnchor(trezoaanchorIdl as TrezoaAnchorIdl))
 
     // Define client generation targets
     const clients = [
@@ -110,7 +110,7 @@ async function generateClients() {
     for (const client of clients) {
       console.log(`⚡ Generating ${client.type} client in ${client.dir}...`)
 
-      await visit(codama.getRoot(), await client.renderVisitor(client.dir))
+      await visit(codoma.getRoot(), await client.renderVisitor(client.dir))
 
       console.log(`✅ Successfully generated ${client.type} client!`)
     }

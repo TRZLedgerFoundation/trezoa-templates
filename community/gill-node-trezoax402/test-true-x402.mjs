@@ -71,7 +71,7 @@ async function createPaymentWithSponsoredTransaction(amount, recipient, resource
       name: 'x402-trezoa-protocol',
       version: '1',
       chainId: 'devnet',
-      verifyingContract: 'x402-sol',
+      verifyingContract: 'x402-trz',
     },
     types: {
       AuthorizationPayload: [

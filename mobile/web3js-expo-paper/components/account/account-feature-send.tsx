@@ -6,7 +6,7 @@ import { ActivityIndicator, Button, TextInput } from 'react-native-paper'
 import React, { useState } from 'react'
 import { useWalletUi } from '../trezoa/use-wallet-ui'
 import { useRequestAirdrop } from '@/components/account/use-request-airdrop'
-import { useTransferSol } from '@/components/account/use-transfer-sol'
+import { useTransferSol } from '@/components/account/use-transfer-trz'
 import { useAppTheme } from '@/components/app-theme'
 
 export function AccountFeatureSend({ address }: { address: PublicKey }) {

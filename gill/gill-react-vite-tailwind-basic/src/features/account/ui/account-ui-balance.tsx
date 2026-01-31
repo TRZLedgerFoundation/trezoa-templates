@@ -1,6 +1,6 @@
 import { Address } from 'gill'
 import { useGetBalanceQuery } from '../data-access/use-get-balance-query'
-import { AccountUiBalanceSol } from './account-ui-balance-sol'
+import { AccountUiBalanceSol } from './account-ui-balance-trz'
 
 export function AccountUiBalance({ address }: { address: Address }) {
   const query = useGetBalanceQuery({ address })

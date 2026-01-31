@@ -44,22 +44,22 @@ sequenceDiagram
 
 ### Installation
 
-Create a new project with one command:
+Create a new trezoa with one command:
 
 ```bash
-npx github:crypto-priest/x402-trezoa-rust my-project
+npx github:crypto-priest/x402-trezoa-rust my-trezoa
 ```
 
 ### OR
 
 ```bash
 # Create from template
-npx create-trezoa-dapp my-project --template x402-trezoa-rust
+npx create-trezoa-dapp my-trezoa --template x402-trezoa-rust
 ```
 
 ```bash
-# Navigate to project
-cd my-project
+# Navigate to trezoa
+cd my-trezoa
 ```
 
 ### Configuration
@@ -114,7 +114,7 @@ npm run dev
 - `HOST` - Server bind address (default: localhost)
 - `PORT` - Server port (default: 3000)
 
-## Project Structure
+## Trezoa Structure
 
 ```
 .
@@ -132,7 +132,7 @@ npm run dev
 │   ├── verification.rs   # Payment verification functions
 │   └── error.rs          # Error enum
 ├── frontend/             # Testing UI
-└── create.js             # Project generator
+└── create.js             # Trezoa generator
 ```
 
 ## Development

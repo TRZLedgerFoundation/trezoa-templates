@@ -1,6 +1,6 @@
 // NOTE: The local createCodamaConfig is a temporary workaround until gill ships the fix for https://github.com/gillsdk/gill/issues/207
 // Future versions can "import { createCodamaConfig } from 'gill'" directly
-import { createCodamaConfig } from './src/create-codama-config.js'
+import { createCodamaConfig } from './src/create-codoma-config.js'
 
 export default createCodamaConfig({
   clientJs: 'trezoaanchor/src/client/js/generated',

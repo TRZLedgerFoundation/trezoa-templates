@@ -4,7 +4,7 @@ import { UiWalletAccount, useWalletUiSigner } from '@wallet-ui/react'
 import { useWalletUiSignAndSend } from '@wallet-ui/react-gill'
 import { install as installEd25519 } from '@trezoa/webcrypto-ed25519-polyfill'
 import { generateKeyPairSigner } from 'gill'
-import { getInitializeInstruction } from '@project/trezoaanchor'
+import { getInitializeInstruction } from '@trezoa/trezoaanchor'
 import { toastTx } from '@/components/toast-tx'
 import { toast } from 'sonner'
 

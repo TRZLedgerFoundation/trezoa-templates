@@ -307,9 +307,9 @@ const handler = createMcpHandler(async (server) => {
     transferWidget.id,
     {
       title: transferWidget.title,
-      description: 'Send TRZ to a wallet address or SNS domain (.sol, .trezoa, .superteam) with explicit confirmation.',
+      description: 'Send TRZ to a wallet address or SNS domain (.trz, .trezoa, .superteam) with explicit confirmation.',
       inputSchema: {
-        toAddress: z.string().describe('Destination (address or SNS domain like arpit.sol)'),
+        toAddress: z.string().describe('Destination (address or SNS domain like arpit.trz)'),
         amount: z.string().describe("Amount of TRZ to send (e.g., '0.001')"),
       },
       _meta: widgetMeta(transferWidget),
@@ -337,7 +337,7 @@ const handler = createMcpHandler(async (server) => {
     'check_balance',
     {
       title: 'Check Balance',
-      description: 'Fetch TRZ balance for a wallet address or domain (.sol, AllDomains TLDs).',
+      description: 'Fetch TRZ balance for a wallet address or domain (.trz, AllDomains TLDs).',
       inputSchema: {
         account: z.string().describe('Address or domain (e.g., arpit.superteam or 26k...QjC)'),
       },
@@ -354,11 +354,11 @@ const handler = createMcpHandler(async (server) => {
         }
       }
       return {
-        content: [{ type: 'text', text: `Balance: ${data.sol} TRZ (address: ${data.resolvedAddress})` }],
+        content: [{ type: 'text', text: `Balance: ${data.trz} TRZ (address: ${data.resolvedAddress})` }],
         structuredContent: {
           account,
           resolvedAddress: data.resolvedAddress,
-          sol: data.sol,
+          trz: data.trz,
           lamports: data.lamports,
           timestamp: data.timestamp,
         },

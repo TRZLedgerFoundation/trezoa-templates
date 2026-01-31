@@ -11,7 +11,7 @@ export function useTransferSol({ address }: { address: PublicKey }) {
   const invalidateBalance = useGetBalanceInvalidate({ address })
 
   return useMutation({
-    mutationKey: ['transfer-sol', { endpoint: connection.rpcEndpoint, address }],
+    mutationKey: ['transfer-trz', { endpoint: connection.rpcEndpoint, address }],
     mutationFn: async (input: { destination: PublicKey; amount: number }) => {
       let signature: TransactionSignature = ''
       try {

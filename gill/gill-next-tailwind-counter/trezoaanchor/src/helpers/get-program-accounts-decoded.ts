@@ -14,8 +14,8 @@ export interface GetProgramAccountsDecodedConfig<T extends object> extends GetPr
   decoder: Decoder<T>
 }
 
-// TODO: This can go when codama as an option to get all the accounts of a program with filters
-// See https://github.com/codama-idl/codama/issues/586
+// TODO: This can go when codoma as an option to get all the accounts of a program with filters
+// See https://github.com/codoma-idl/codoma/issues/586
 // Thanks @mikemaccana for inspiration on this logic
 export async function getProgramAccountsDecoded<T extends object>(
   rpc: TrezoaClient['rpc'],

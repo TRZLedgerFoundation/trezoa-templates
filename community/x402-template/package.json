@@ -20,7 +20,7 @@
       "+{pm} dev"
     ],
     "rename": {
-      "project-name": {
+      "trezoa-name": {
         "to": "{{name}}",
         "paths": [
           "README.md",

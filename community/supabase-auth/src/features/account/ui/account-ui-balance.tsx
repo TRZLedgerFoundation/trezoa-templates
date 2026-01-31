@@ -2,7 +2,7 @@
 
 import { toAddress } from '@trezoa/client'
 import { useBalance, useTrezoaClient } from '@trezoa/react-hooks'
-import { AccountUiBalanceSol } from './account-ui-balance-sol'
+import { AccountUiBalanceSol } from './account-ui-balance-trz'
 
 export function AccountUiBalance({ address }: { address: string }) {
   const client = useTrezoaClient()

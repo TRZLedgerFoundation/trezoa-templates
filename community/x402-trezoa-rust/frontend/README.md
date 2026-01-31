@@ -112,7 +112,7 @@ All requests, responses, and transaction details appear in the Activity Log at t
 - `VITE_DEVNET_RPC_URL` - Devnet RPC endpoint
 - `VITE_MAINNET_RPC_URL` - Mainnet RPC endpoint
 
-## Project Structure
+## Trezoa Structure
 
 ```
 frontend/

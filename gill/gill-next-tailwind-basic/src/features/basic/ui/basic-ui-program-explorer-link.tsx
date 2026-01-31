@@ -1,4 +1,4 @@
-import { BASIC_PROGRAM_ADDRESS } from '@project/trezoaanchor'
+import { BASIC_PROGRAM_ADDRESS } from '@trezoa/trezoaanchor'
 import { AppExplorerLink } from '@/components/app-explorer-link'
 import { ellipsify } from '@wallet-ui/react'
 

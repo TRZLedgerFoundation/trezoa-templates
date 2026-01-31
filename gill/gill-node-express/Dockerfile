@@ -4,7 +4,7 @@ FROM node:22-alpine AS base
 # Set the working directory for all images
 WORKDIR /srv/api
 
-# LAYER 1: Build the project
+# LAYER 1: Build the trezoa
 FROM base AS builder-dist
 
 # Install dependencies only when needed

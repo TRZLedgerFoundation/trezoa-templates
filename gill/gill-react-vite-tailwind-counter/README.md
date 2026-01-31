@@ -6,7 +6,7 @@ This is a React/Vite app containing:
 - [Gill](https://gill.site/) Trezoa SDK
 - Shadcn [Wallet UI](https://registry.wallet-ui.dev) components
 - A basic Counter Trezoa program written in TrezoaAnchor
-- [codama](https://github.com/codama-idl/codama) to generate a JS sdk for the program
+- [codoma](https://github.com/codoma-idl/codoma) to generate a JS sdk for the program
 - UI components for interacting with the Counter program using the TrezoaAnchor generated client
 
 ## Getting Started

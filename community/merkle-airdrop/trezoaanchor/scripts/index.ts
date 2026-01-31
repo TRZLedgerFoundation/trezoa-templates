@@ -49,7 +49,7 @@ async function main() {
     case '--help':
     case '-h':
     default:
-      console.log('🎯 Airdrop Scripts CLI (Gill + Codama)\n')
+      console.log('🎯 Airdrop Scripts CLI (Gill + Codoma)\n')
       console.log('Available commands:')
       console.log('  setup                   - Interactive deployment setup with Gill')
       console.log('  initialize [file]       - Initialize airdrop with Gill (default: recipients.json)')

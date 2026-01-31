@@ -20,7 +20,7 @@ import { TREZOA_DISTRIBUTOR_PROGRAM_ADDRESS } from '../generated/clients/ts/prog
 import { generateGillMerkleTree, generateGillProof, type GillMerkleTree } from '../lib/merkle-tree-manager'
 import type { GillRecipient } from '../lib/types'
 
-describe('Trezoa Distributor (Comprehensive Gill + Codama)', () => {
+describe('Trezoa Distributor (Comprehensive Gill + Codoma)', () => {
   const NETWORK = 'devnet'
   let client: ReturnType<typeof createTrezoaClient>
   let rpc: any
@@ -82,7 +82,7 @@ describe('Trezoa Distributor (Comprehensive Gill + Codama)', () => {
     console.log(`🏛️  Airdrop State PDA: ${airdropStatePda}`)
   })
 
-  test('Initialize airdrop with Merkle tree (Gill + Codama)', async () => {
+  test('Initialize airdrop with Merkle tree (Gill + Codoma)', async () => {
     console.log('\n🚀 Testing airdrop initialization...')
 
     try {
@@ -129,7 +129,7 @@ describe('Trezoa Distributor (Comprehensive Gill + Codama)', () => {
     expect(Number(vaultBalance.value)).toBeGreaterThan(0)
   })
 
-  test('Claim TRZ - Recipient 1 (Gill + Codama)', async () => {
+  test('Claim TRZ - Recipient 1 (Gill + Codoma)', async () => {
     console.log('\n🎯 Testing claim for Recipient 1...')
 
     const proofResult = generateGillProof(merkleTreeResult.merkleTree, 0)
@@ -183,7 +183,7 @@ describe('Trezoa Distributor (Comprehensive Gill + Codama)', () => {
     expect(claimStatus).toBeTruthy() // Account exists = claimed
   })
 
-  test('Claim TRZ - Recipient 2 (Gill + Codama)', async () => {
+  test('Claim TRZ - Recipient 2 (Gill + Codoma)', async () => {
     console.log('\n🎯 Testing claim for Recipient 2...')
 
     const proofResult = generateGillProof(merkleTreeResult.merkleTree, 1)
@@ -237,7 +237,7 @@ describe('Trezoa Distributor (Comprehensive Gill + Codama)', () => {
     expect(claimStatus).toBeTruthy() // Account exists = claimed
   })
 
-  test('Should fail to claim twice (Gill + Codama)', async () => {
+  test('Should fail to claim twice (Gill + Codoma)', async () => {
     console.log('\n🚫 Testing double-claim prevention...')
 
     const proofResult = generateGillProof(merkleTreeResult.merkleTree, 0)

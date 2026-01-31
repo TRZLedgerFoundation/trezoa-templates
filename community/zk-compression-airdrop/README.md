@@ -36,7 +36,7 @@ npm install
 
 ### 2. Set Up Environment Variables
 
-Create a `.env.local` file in the project root:
+Create a `.env.local` file in the trezoa root:
 
 ```bash
 # Helius RPC endpoint (required for ZK compression)
@@ -116,7 +116,7 @@ The mint authority calls `mintTo()` in batches, directly minting compressed toke
 
 Splits recipients across multiple transactions to stay within transaction size limits. Configurable via UI slider (max 50 per batch).
 
-## Project Structure
+## Trezoa Structure
 
 ```
 ├── scripts/
@@ -252,4 +252,4 @@ This is expected! Compressed tokens use Merkle trees. Check the mint address on 
 
 ## License
 
-This project is based on the gill-next-tailwind template from the TRZ Ledger Foundation.
+This trezoa is based on the gill-next-tailwind template from the TRZ Ledger Foundation.

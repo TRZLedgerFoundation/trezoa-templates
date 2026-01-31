@@ -13,7 +13,7 @@
   "create-trezoa-dapp": {
     "instructions": [
       "Generates the necessary TypeScript types and client code from the Trezoa program:",
-      "+{pm} codama:generate",
+      "+{pm} codoma:generate",
       "Then set up the program:",
       "+{pm} airdrop:setup",
       "Initialize the on-chain airdrop state:",
@@ -27,7 +27,7 @@
     "airdrop:setup": "cd trezoaanchor && npx ts-node scripts/index.ts setup",
     "airdrop:init": "cd trezoaanchor && npx ts-node scripts/index.ts initialize",
     "airdrop:extract": "cd trezoaanchor && npx ts-node scripts/extract-wallet.ts --list",
-    "codama:generate": "cd trezoaanchor && trezoaanchor build && npx ts-node codama.config.ts",
+    "codoma:generate": "cd trezoaanchor && trezoaanchor build && npx ts-node codoma.config.ts",
     "test": "cd trezoaanchor && vitest run tests/trezoa-distributor-comprehensive.test.ts",
     "test:watch": "cd trezoaanchor && vitest tests/trezoa-distributor-comprehensive.test.ts",
     "ci": "npm run build && npm run lint && npm run format:check",
@@ -37,7 +37,7 @@
     "lint": "eslint",
     "start": "next start",
     "type-check": "tsc --noEmit",
-    "type-check:node": "tsc --project tsconfig.node.json --noEmit"
+    "type-check:node": "tsc --trezoa tsconfig.node.json --noEmit"
   },
   "version": "0.0.0",
   "private": true,
@@ -47,7 +47,7 @@
     "@trezoa/react-hooks": "^1.1.0",
     "bs58": "^6.0.0",
     "clsx": "^2.1.1",
-    "codama": "^1.3.3",
+    "codoma": "^1.3.3",
     "js-sha3": "^0.9.3",
     "next": "16.0.10",
     "next-themes": "^0.4.6",
@@ -57,10 +57,10 @@
     "tw-animate-css": "^1.3.7"
   },
   "devDependencies": {
-    "@codama/cli": "^1.3.1",
-    "@codama/nodes-from-trezoaanchor": "^1.2.5",
-    "@codama/renderers": "^1.0.31",
-    "@codama/visitors-core": "^1.3.3",
+    "@codoma/cli": "^1.3.1",
+    "@codoma/nodes-from-trezoaanchor": "^1.2.5",
+    "@codoma/renderers": "^1.0.31",
+    "@codoma/visitors-core": "^1.3.3",
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/bn.js": "^5.2.0",

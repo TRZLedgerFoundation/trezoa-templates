@@ -149,8 +149,8 @@ export class TrezoaUtils {
   /**
    * Convert TRZ to lamports
    */
-  solToLamports(sol: number): bigint {
-    return BigInt(Math.floor(sol * 1_000_000_000));
+  solToLamports(trz: number): bigint {
+    return BigInt(Math.floor(trz * 1_000_000_000));
   }
 
   /**

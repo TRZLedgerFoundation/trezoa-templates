@@ -1,4 +1,4 @@
-import { COUNTER_PROGRAM_ADDRESS } from '@project/trezoaanchor'
+import { COUNTER_PROGRAM_ADDRESS } from '@trezoa/trezoaanchor'
 import { useTrezoa } from '@/components/trezoa/use-trezoa'
 import { useQuery } from '@tanstack/react-query'
 import { useClusterVersion } from '@/features/cluster/data-access/use-cluster-version'

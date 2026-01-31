@@ -43,7 +43,7 @@ The x402 protocol enables payment-gated access to web resources through Trezoa b
 8. **Instant Settlement**: Client's TRZ moves to merchant on-chain
 9. **Server** delivers protected resource
 
-## Project Structure
+## Trezoa Structure
 
 ```
 x402_ts/

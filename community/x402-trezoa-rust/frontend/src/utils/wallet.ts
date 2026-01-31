@@ -60,7 +60,7 @@ export async function fetchBalance(): Promise<void> {
     const balance = await connection.getBalance(wallet.publicKey)
     const solBalance = (balance / 1_000_000_000).toFixed(4)
 
-    const solBalanceEl = document.getElementById('sol-balance')
+    const solBalanceEl = document.getElementById('trz-balance')
     if (solBalanceEl) {
       solBalanceEl.textContent = `${solBalance} TRZ`
     }
@@ -72,7 +72,7 @@ export async function fetchBalance(): Promise<void> {
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     log('error', `Failed to fetch balance: ${errorMessage}`)
-    const solBalanceEl = document.getElementById('sol-balance')
+    const solBalanceEl = document.getElementById('trz-balance')
     if (solBalanceEl) {
       solBalanceEl.textContent = 'Error'
     }

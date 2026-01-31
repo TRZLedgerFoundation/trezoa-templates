@@ -1,4 +1,4 @@
-// Codama-generated client imports
+// Codoma-generated client imports
 import { getInitializeAirdropInstruction } from '../generated/clients/ts/instructions/initializeAirdrop'
 import * as fs from 'fs'
 import type { RecipientsFile, GillInitializationResult } from './types'
@@ -153,11 +153,11 @@ export async function initializeGillAirdrop(
     const programAddress = address(status.programId)
     console.log(`📍 Program ID: ${programAddress} (Gill)`)
 
-    // Ensure Codama client is in sync with current program ID
-    console.log('🔄 Checking Codama client sync... (Gill)')
+    // Ensure Codoma client is in sync with current program ID
+    console.log('🔄 Checking Codoma client sync... (Gill)')
     const codamaSynced = await ensureGillCodamaSync({ workingDir })
     if (!codamaSynced) {
-      console.log('⚠️  Warning: Could not sync Codama client. Proceeding anyway... (Gill)')
+      console.log('⚠️  Warning: Could not sync Codoma client. Proceeding anyway... (Gill)')
     }
 
     console.log('🔍 Verifying program exists on-chain... (Gill)')
@@ -200,7 +200,7 @@ export async function initializeGillAirdrop(
       console.log('✅ Airdrop not yet initialized, proceeding... (Gill)')
     }
 
-    console.log('📤 Preparing initialize transaction... (Codama + Gill)')
+    console.log('📤 Preparing initialize transaction... (Codoma + Gill)')
 
     const merkleRootHex = recipientsData.merkleRoot.replace('0x', '')
     const merkleRootBytes = new Uint8Array(Buffer.from(merkleRootHex, 'hex'))
@@ -228,7 +228,7 @@ export async function initializeGillAirdrop(
     try {
       signature = await sendAndConfirmTransaction(transaction)
 
-      console.log('✅ Transaction sent successfully! (Codama + Gill)')
+      console.log('✅ Transaction sent successfully! (Codoma + Gill)')
       console.log(`📋 Transaction signature: ${signature}`)
       console.log(`🔍 View on explorer: https://explorer.trezoa.com/tx/${signature}?cluster=${network}`)
     } catch (error) {
@@ -256,7 +256,7 @@ export async function initializeGillAirdrop(
 
           signature = await sendAndConfirmTransaction(retryTransaction)
 
-          console.log('✅ Transaction sent successfully after retry! (Codama + Gill)')
+          console.log('✅ Transaction sent successfully after retry! (Codoma + Gill)')
           console.log(`📋 Transaction signature: ${signature}`)
         } catch (retryError) {
           return {

@@ -4,7 +4,7 @@ import { PublicKey } from '@trezoa/web3.js'
 import { ActivityIndicator, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
 import { Button } from '@react-navigation/elements'
-import { useTransferSol } from '@/components/account/use-transfer-sol'
+import { useTransferSol } from '@/components/account/use-transfer-trz'
 import { useThemeColor } from '@/hooks/use-theme-color'
 
 export function AccountFeatureSend({ address }: { address: PublicKey }) {

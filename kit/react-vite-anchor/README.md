@@ -19,7 +19,7 @@ Open [http://localhost:5173](http://localhost:5173), connect your wallet, and in
 
 - **Wallet connection** via `@trezoa/react-hooks` with auto-discovery
 - **TRZ Vault program** - deposit and withdraw TRZ from a personal PDA vault
-- **Codama-generated client** - type-safe program interactions using `@trezoa/kit`
+- **Codoma-generated client** - type-safe program interactions using `@trezoa/kit`
 - **Tailwind CSS v4** with light/dark mode
 
 ## Stack
@@ -29,21 +29,21 @@ Open [http://localhost:5173](http://localhost:5173), connect your wallet, and in
 | Frontend       | React 19, Vite, TypeScript              |
 | Styling        | Tailwind CSS v4                         |
 | Trezoa Client  | `@trezoa/client`, `@trezoa/react-hooks` |
-| Program Client | Codama-generated, `@trezoa/kit`         |
+| Program Client | Codoma-generated, `@trezoa/kit`         |
 | Program        | TrezoaAnchor (Rust)                           |
 
-## Project Structure
+## Trezoa Structure
 
 ```
 ├── src/
 │   ├── App.tsx               # Main app with wallet UI
 │   ├── VaultCard.tsx         # Vault deposit/withdraw UI
 │   ├── providers.tsx         # Trezoa client setup
-│   ├── generated/vault/      # Codama-generated program client
+│   ├── generated/vault/      # Codoma-generated program client
 │   └── main.tsx              # Entry point
 ├── trezoaanchor/                   # TrezoaAnchor workspace
 │   └── programs/vault/       # Vault program (Rust)
-└── codama.json               # Codama client generation config
+└── codoma.json               # Codoma client generation config
 ```
 
 ## Deploy Your Own Vault
@@ -104,10 +104,10 @@ The tests are in `trezoaanchor/programs/vault/src/tests.rs` and automatically us
 If you modify the program, regenerate the TypeScript client:
 
 ```bash
-npm run setup   # Or: npm run trezoaanchor-build && npm run codama:js
+npm run setup   # Or: npm run trezoaanchor-build && npm run codoma:js
 ```
 
-This uses [Codama](https://github.com/codama-idl/codama) to generate a type-safe client from the TrezoaAnchor IDL.
+This uses [Codoma](https://github.com/codoma-idl/codoma) to generate a type-safe client from the TrezoaAnchor IDL.
 
 ## Learn More
 
@@ -115,4 +115,4 @@ This uses [Codama](https://github.com/codama-idl/codama) to generate a type-safe
 - [TrezoaAnchor Docs](https://www.trezoaanchor-lang.com/docs) - program development framework
 - [Deploying Programs](https://trezoa.com/docs/programs/deploying) - deployment guide
 - [framework-kit](https://github.com/trzledgerfoundation/framework-kit) - the React hooks used here
-- [Codama](https://github.com/codama-idl/codama) - client generation from IDL
+- [Codoma](https://github.com/codoma-idl/codoma) - client generation from IDL
